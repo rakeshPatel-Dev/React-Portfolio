@@ -33,9 +33,10 @@ const ProjectSec = () => {
              {projectData.slice(0, 4).map((project, idx) => (
           <SpotlightCard
             key={idx}
-            spotlightColor={`rgba(${0},${229},${255},${0.2})`}
+            spotlightColor={`rgba(${0},${0},${140},${0.5})`}
             className="cursor-pointer"
-            onClick={() => handleCardClick(project.title)}
+            onClick={() => navigate(`/projects/${project.id}`)}
+
           >
               {/* Type at top right */}
               <span
