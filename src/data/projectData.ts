@@ -137,7 +137,7 @@ export const projectData: ProjectType[] = [
 
   {
     id: "find-user",
-    image: "/public/images/userfinder.webp",
+    image: "/public/images/user finder.webp",
     title: "Find User Feature",
     description:
       "A reusable search component to find users or items by name or keyword.",

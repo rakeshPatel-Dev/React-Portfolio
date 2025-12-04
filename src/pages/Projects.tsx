@@ -1,95 +1,136 @@
-import { Link } from "react-router-dom";
-import SpotlightCard from "@/components/ui/SpotlightCard";
-import { projectData } from "@/data/projectData";
-import { Tooltip, TooltipTrigger } from "@/components/ui/Tooltip"; // your tooltip component
 import { Github, Globe } from "lucide-react";
-import { TooltipContent } from "@radix-ui/react-tooltip";
-// import {
-//   FaReact,
-//   FaHtml5,
-//   FaCss3,
-//   FaJs,
-//   FaGithub,
-//   FaExternalLinkAlt,
-// } from "react-icons/fa";
+import { Button } from "../components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { projectData } from "@/data/projectData";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../components/ui/tooltip";
+import SpotlightCard from "../components/ui/SpotlightCard";
+import LazyImageWithSkeleton from "@/components/sections/LazyLoading";
 
-// import { RiGlobeFill } from "react-icons/ri";
+const ProjectSec = () => {
+  const navigate = useNavigate();
 
-const Projects = () => {
+
   return (
-    <div className="parent-container grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {projectData.map((project, idx) => (
-        <SpotlightCard
-          key={idx}
-          className="p-4 rounded-lg w-96 border flex flex-col gap-4"
-          spotlightColor="rgba(0, 229, 255, 0.8)"
-        >
-          {/* Project Image */}
-          <div>
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover rounded-lg"
-            />
-          </div>
+    <div>
+      <section id="projects" className="flex max-w-4xl mt-25 mb-10 mx-auto flex-col gap-8">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+            Projects
+          </h2>
+        </div>
 
-          {/* Title + Icons */}
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">{project.title}</h1>
-            <div className="flex items-center gap-2">
-              {/* LIve */}
-              <Tooltip>
-                <TooltipTrigger>
-                <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                  <Globe className="w-5 h-5 cursor-pointer text-gray-700 dark:text-gray-300" />
-                </a>
-                </TooltipTrigger>
-                <TooltipContent>Live Demo</TooltipContent>
-              </Tooltip>
-              {/* Github */}
-              <Tooltip>
-                <TooltipTrigger>
-                <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                  <Github className="w-5 h-5 cursor-pointer text-gray-700 dark:text-gray-300" />
-                </a>
-                </TooltipTrigger>
-                <TooltipContent>Source Code</TooltipContent>
-              </Tooltip>
-            </div>
-          </div>
+        {/* card container */}
 
-          {/* Description */}
-          <p className="text-gray-700 dark:text-gray-300">{project.description}</p>
+        <div className="parent-container grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2">
+          {projectData.map((project, idx) => (
+            <SpotlightCard
+              key={idx}
+              spotlightColor={`rgba(${0},${0},${140},${0.5})`}
+              className="cursor-pointer"
+              onClick={() => navigate(`/projects/${project.id}`)}
 
-          {/* Tech Icons */}
-          <div className="flex flex-col gap-2">
-            <h1 className="font-medium">Technologies</h1>
-            <div className="flex gap-4 items-center">
-              {project.icons.map((ic, iIdx) => (
-                <Tooltip key={iIdx} content={ic.tooltip}>
-                  <ic.icon className="w-6 h-6 text-gray-700 dark:text-gray-300 cursor-pointer" />
-                </Tooltip>
-              ))}
-            </div>
-          </div>
-
-          {/* Status + View More */}
-          <div className="flex items-center justify-between">
-            <div className="border flex items-center rounded-full gap-2 px-4 py-2">
-              <span className="h-3 w-3 bg-green-600 animate-pulse rounded-full"></span>
-              <span>{project.status}</span>
-            </div>
-            <Link
-              to="/project"
-              className="text-blue-600 hover:underline font-medium"
             >
-              View More
-            </Link>
-          </div>
-        </SpotlightCard>
-      ))}
+              {/* Type at top right */}
+              <span
+                className="absolute z-10 top-3 right-3 px-3 py-1 rounded-full text-white backdrop-blur-2xl text-xs font-medium border border-primary/10"
+                style={{ backgroundColor: project.typeColor + "80" }} // 99 = ~60% opacity in hex
+              >
+                {project.type.toUpperCase()}
+              </span>
+
+
+              {/* Project Image */}
+              <div className="overflow-hidden rounded-xl">
+                <LazyImageWithSkeleton
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full object-cover hover:scale-110 mb-4 transition-all rounded-xl"
+                />
+
+              </div>
+
+              {/* Title + Live/Github Icons */}
+              <div className="flex items-center justify-between">
+                <h1 className="text-2xl font-bold mb-4">{project.title}</h1>
+                <div className="flex text-neutral-600/80 items-center gap-3">
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()} // prevent card click
+                      >
+                        <Globe className="hover:text-primary transition-all cursor-pointer w-5 h-5 hover:scale-115" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>View Live</TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <a
+                        href={project.sourceLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Github className="hover:text-primary transition-all cursor-pointer w-5 h-5 hover:scale-115" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>Source Code</TooltipContent>
+                  </Tooltip>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="font-body text-neutral-500/80 mb-4">{project.description}</p>
+
+              {/* Technologies */}
+              <div className="flex flex-col gap-2 mb-4">
+                <h1>Technologies</h1>
+                <div className="flex items-center gap-4">
+                  {project.icons.map((iconData, idx) => {
+                    const Icon = iconData.icon;
+                    return (
+                      <Tooltip key={idx}>
+                        <TooltipTrigger>
+                          <Icon
+                            className="w-6 h-6 cursor-pointer hover:scale-110 transition-all"
+                            style={{ color: iconData.color }}
+                            onClick={(e) => e.stopPropagation()}
+                          />
+                        </TooltipTrigger>
+                        <TooltipContent>{iconData.tooltip}</TooltipContent>
+                      </Tooltip>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Status + View More */}
+              <div className="select-none flex items-center justify-between flex-row mt-3">
+                <div className="flex items-center gap-2 border px-3 py-1 rounded-full text-sm text-green-500 font-medium cursor-default">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+                  </span>
+                  {project.status}
+                </div>
+
+                <Button
+                  variant="link"
+                  onClick={() => navigate(`/projects/${project.id}`)}
+                >
+                  View details
+                </Button>
+              </div>
+            </SpotlightCard>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Projects;
+export default ProjectSec;

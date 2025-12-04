@@ -6,6 +6,8 @@ import Page404 from './pages/Page404'
 import Header from './components/sections/Header'
 import Footer from './components/sections/Footer'
 import ProjectDetails from './projects/ProjectDetails'
+import { AppDock } from './components/sections/GlobalDock'
+
 
 const App = () => {
   return (
@@ -19,6 +21,7 @@ const App = () => {
         <Route path='/projects' element={<Projects />} />
         <Route path='*' element={<Page404 />} />
       </Routes>
+      <AppDock/>
       <Footer />
     </>
   )
