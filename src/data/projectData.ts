@@ -29,7 +29,7 @@ export interface ProjectType {
 export const projectData: ProjectType[] = [
   {
     id: "moodymusik",
-    image: "/public/images/moodymusik.webp",
+    image: "/images/moodymusik.webp",
     title: "MoodyMusik",
     description:
       "A mood-based playlist generator with real-time search and a dedicated song player.",
@@ -47,7 +47,7 @@ export const projectData: ProjectType[] = [
 
   {
     id: "imagetoolkit",
-    image: "/public/images/imageToolkit.webp",
+    image: "/images/imageToolkit.webp",
     title: "Image Toolkit",
     description:
       "A powerful image toolkit to resize, compress, convert and crop images instantly.",
@@ -65,7 +65,7 @@ export const projectData: ProjectType[] = [
 
   {
     id: "fintrack",
-    image: "/public/images/fintrack.webp",
+    image: "/images/fintrack.webp",
     title: "Fintrack",
     description: "A modern personal finance tracker to manage income, expenses, and budgets with analytics and reports.",
     type: "fullStack",
@@ -83,7 +83,7 @@ export const projectData: ProjectType[] = [
 
  {
   id: "ems-portal",
-  image: "/public/images/ems.webp",
+  image: "/images/ems.webp",
   title: "EMS Admin & Employee Portal",
   description: "A responsive React-based portal for managing employees, tasks, and permissions in a Dairy Company's Emergency Management System.",
   type: "fullStack",
@@ -102,7 +102,7 @@ export const projectData: ProjectType[] = [
 
   {
     id: "netflix-clone-nepal",
-    image: "/public/images/netflix.webp",
+    image: "/images/netflix.webp",
     title: "Netflix Nepal Clone",
     description:
       "A UI-heavy clone showcasing movie grid, hero section, and animated UI.",
@@ -121,7 +121,7 @@ export const projectData: ProjectType[] = [
 
   {
     id: "photolab",
-    image: "/public/images/photolab.webp",
+    image: "/images/photolab.webp",
     title: "Photolab",
     description:
       "A clean gallery app with search, dark mode, and random image fetching.",
@@ -139,7 +139,7 @@ export const projectData: ProjectType[] = [
 
   {
     id: "love-confession",
-    image: "/public/images/proposeme.webp",
+    image: "/images/proposeme.webp",
     title: "Love Confession Website",
     description:
       "A fun micro-interaction project where the 'No' button dodges you.",
