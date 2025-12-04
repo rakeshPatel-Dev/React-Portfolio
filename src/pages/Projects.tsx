@@ -3,7 +3,7 @@ import { Button } from "../components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { projectData } from "@/data/projectData";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../components/ui/tooltip";
-import SpotlightCard from "../components/ui/SpotlightCard";
+import SpotlightCard from "../components/ui/spotlightCard";
 import LazyImageWithSkeleton from "@/components/LazyLoading";
 
 const ProjectSec = () => {

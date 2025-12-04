@@ -16,7 +16,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion"; // or from Radix if directly
-import Folder from "@/components/ui/Folder";
 import ProjectFolder from "./ProjectFolder";
 
 

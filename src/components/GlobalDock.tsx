@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
-import { Dock, DockIcon } from "@/components/ui/dock";
+import { Dock, DockIcon } from "@/components/ui/Dock";
 import {
   Home,
   Code2,

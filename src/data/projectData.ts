@@ -4,7 +4,7 @@ import {
   RiJavascriptFill,
 } from "react-icons/ri";
 
-import { FaYoutube, FaUnsplash, FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaYoutube, FaUnsplash, FaReact } from "react-icons/fa";
 import { SiFirebase, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { IoImage, IoSearch, IoHeart } from "react-icons/io5";
 // import { TbBrandTypescript } from "react-icons/tb";
