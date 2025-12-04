@@ -8,12 +8,6 @@ import SpotlightCard from "../ui/spotlightCard";
 const ProjectSec = () => {
   const navigate = useNavigate();
 
-  const handleCardClick = (title: string) => {
-    // simple slug conversion: replace spaces with dashes and lowercase
-    const slug = title.toLowerCase().replace(/\s+/g, "-");
-    navigate(`/project/${slug}`);
-  };
-
   return (
     <div>
       <section id="projects" className="flex flex-col gap-8">
@@ -127,10 +121,7 @@ const ProjectSec = () => {
 
                 <Button
                   variant="link"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleCardClick(project.title);
-                  }}
+                  onClick={() => navigate(`/projects/${project.id}`)}
                 >
                   View details
                 </Button>

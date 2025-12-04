@@ -10,8 +10,9 @@ import RequestCallback from '@/components/sections/RequestCallback'
 
 const Home = () => {
   return (
-    <div className=' w-full max-w-4xl mx-auto h-auto pt-20 px-6 sm:px-4 lg:px-0'>
+    <>
       <Hero />
+    <div className=' w-full max-w-4xl mx-auto h-auto  px-6 sm:px-4 lg:px-0'>
       <About />
       <Exp />
       <Skills />
@@ -31,10 +32,11 @@ const Home = () => {
           strokeColor="#ff8000"
           className='dark:text-white text-black'
           minFontSize={36}
-        />
+          />
       </div>
 
     </div>
+          </>
   )
 }
 

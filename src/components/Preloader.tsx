@@ -48,7 +48,7 @@ export default function Preloader({ onFinish }: PreloaderProps) {
             delay: (words.length * 0.2) + 0.2,
             ease: "easeInOut",
           }}
-          className="px-10 sm:px-4 md:px-0 fixed inset-0 dark:bg-[#ffffcc] bg-black z-9999 flex items-center justify-center"
+          className="px-10 sm:px-4 md:px-0 fixed inset-0 dark:bg-[#f9f9f9] bg-black z-9999 flex items-center justify-center"
         >
           <div className="relative flex flex-col items-center justify-center text-white dark:text-black text-7xl font-extrabold">
             {words.map((word, i) => (

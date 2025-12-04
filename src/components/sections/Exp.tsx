@@ -49,7 +49,7 @@ const Exp = () => {
                   </Tooltip>
                   <Tooltip>
                     <TooltipTrigger>
-                      <a href="#" rel="noopener">
+                      <a href="https://www.facebook.com/ghardailodairy" target="_blank" rel="noopener">
                         <Facebook className="w-4 h-4 text-neutral-600 dark:text-neutral-500" />
                         <TooltipContent>Facebook</TooltipContent>
                       </a>

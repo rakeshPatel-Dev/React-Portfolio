@@ -9,12 +9,7 @@ const Hero = () => {
   return (
     <div>
       <section
-        className="tilt   mb-2 relative h-150 w-full flex flex-col items-center justify-center text-center rounded-md overflow-hidden"
-        data-tilt=""
-        data-tilt-max={10}
-        data-tilt-speed={400}
-        data-tilt-glare="true"
-        data-tilt-max-glare="0.2"
+        className="mb-2 relative mt-15 h-150 w-full flex flex-col items-center justify-center text-center rounded-md overflow-hidden"
       >
         {/* Animated Gradient Background */}
         <div className="absolute inset-0 z-0 animated-bg" />
@@ -61,7 +56,7 @@ const Hero = () => {
               </Button>
             </Link>
             <a
-              href="/assets/docs/Rakesh Patel CV.pdf"
+              href="/docs/Rakesh-patel_.pdf"
               download="Rakesh-patel_CV.pdf"
             >
               <Button variant={"outline"} size={"lg"} className=" cursor-pointer">
