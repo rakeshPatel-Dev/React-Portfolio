@@ -27,11 +27,20 @@ const ProjectDetails = () => {
 
   if (!project || !caseStudy) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-center text-neutral-600 dark:text-neutral-300">
+      <div className="min-h-screen flex-col gap-14 flex items-center justify-center text-center text-neutral-600 dark:text-neutral-300">
+        <div>
+
         <h1>Project not found, working on it...</h1>
-        <Link to="/projects" className="ml-4 text-blue-500 hover:underline">
+        <Button variant="link">
+        <Link to="/projects">
           Go Back
         </Link>
+        </Button>
+        </div>
+        <div className="flex items-center gap-20 flex-col mb-4">
+            <h1 className="text-2xl heading-bold">Explore more projects</h1>
+        <ProjectFolder/>
+          </div>
       </div>
     );
   }
@@ -72,12 +81,12 @@ const ProjectDetails = () => {
           {/* Links */}
           <div className="flex gap-4 mt-4 flex-wrap">
             <Button variant="default" className=" cursor-pointer">
-              <a href={project.liveLink} className="flex flex-row items-center gap-2 ">
+              <a target="_black" href={project.liveLink} className="flex flex-row items-center gap-2 ">
                 <Globe /> Live Demo
               </a>
             </Button>
             <Button variant="outline" className=" cursor-pointer">
-              <a href={project.sourceLink} className="flex items-center flex-row gap-2">
+              <a target="_blank" href={project.sourceLink} className="flex items-center flex-row gap-2">
 
                 <Github /> Source Code
               </a>

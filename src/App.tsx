@@ -37,7 +37,7 @@ const App = () => {
 
     const timer = setTimeout(() => {
       setShowPreloader(false);
-    }, 3000); // Same duration as preloader
+    }, 3200); // Same duration as preloader
 
     return () => clearTimeout(timer);
   }, []);

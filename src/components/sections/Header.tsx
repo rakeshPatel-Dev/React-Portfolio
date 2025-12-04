@@ -14,9 +14,9 @@ const Header = () => {
     </Link>
     {/* Navigation */}
     <nav className="flex items-center space-x-4">
-      <Link to="/projects">Projects</Link>
-      <Link to="/experience">EXP</Link>
-      <Link to="/contact">Contact</Link>
+      <Link className="hover:underline hover:underline-offset-8 transition-all" to="/projects">Projects</Link>
+      {/* <Link to="/experience">EXP</Link> */}
+      <Link className="hover:underline hover:underline-offset-8 transition-all" to="/contact">Contact</Link>
 
     </nav>
     <AnimatedThemeToggler/>

@@ -4,8 +4,8 @@ import {
   RiJavascriptFill,
 } from "react-icons/ri";
 
-import { FaYoutube, FaUnsplash, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiShadcnui, SiVite } from "react-icons/si";
+import { FaYoutube, FaUnsplash, FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { SiFirebase, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { IoImage, IoSearch, IoHeart } from "react-icons/io5";
 // import { TbBrandTypescript } from "react-icons/tb";
 
@@ -61,24 +61,44 @@ export const projectData: ProjectType[] = [
       { icon: RiReactjsFill, tooltip: "React", color: "#61dafb" },
       { icon: SiShadcnui, tooltip: "Shadcn UI", color: "#7c3aed" },
     ],
-  },
+  }, 
 
   {
-    id: "call-reminder",
-    image: "/public/images/callapp.webp",
-    title: "Call Reminder App",
-    description: "A simple and elegant reminder app for scheduling calls.",
-    type: "frontend",
-    typeColor: "#4ade80",
-    liveLink: "https://callreminderapp.netlify.app/",
-    sourceLink: "https://github.com/rakeshPatel-Dev/Note-App.git",
+    id: "fintrack",
+    image: "/public/images/fintrack.webp",
+    title: "Fintrack",
+    description: "A modern personal finance tracker to manage income, expenses, and budgets with analytics and reports.",
+    type: "fullStack",
+    typeColor: "#800000",
+    liveLink: "https://fintrack.vercel.app/", // your deployed Vercel link
+    sourceLink: "https://github.com/rakeshPatel-Dev/finTrack.git",
     status: "Completed",
     icons: [
-      { icon: FaHtml5, tooltip: "HTML5", color: "#e34f26" },
-      { icon: FaCss3Alt, tooltip: "CSS3", color: "#1572b6" },
+      { icon: FaReact, tooltip: "React", color: "#61dafb" },
+      { icon: SiTypescript, tooltip: "TypeScript", color: "#3178c6" },
+      { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#06b6d4" },
       { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
     ],
   },
+
+ {
+  id: "ems-portal",
+  image: "/public/images/ems.webp",
+  title: "EMS Admin & Employee Portal",
+  description: "A responsive React-based portal for managing employees, tasks, and permissions in a Dairy Company's Emergency Management System.",
+  type: "fullStack",
+  typeColor: "#800000",
+  liveLink: "https://ems-portal.netlify.app/", // replace with your live link
+  sourceLink: "https://github.com/rakeshPatel-Dev/EMS.git",
+  status: "Completed",
+  icons: [
+    { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
+    { icon: FaReact, tooltip: "React.js", color: "#61dafb" },
+    { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
+    { icon: SiFirebase, tooltip: "Firebase (Firestore & Auth)", color: "#ffcb2b" }
+  ],
+},
+
 
   {
     id: "netflix-clone-nepal",
@@ -118,41 +138,6 @@ export const projectData: ProjectType[] = [
   },
 
   {
-    id: "todo-app",
-    image: "/public/images/todoapp.webp",
-    title: "To Do App",
-    description:
-      "An interactive To-Do app that stores tasks using LocalStorage.",
-    type: "frontend",
-    typeColor: "#4ade80",
-    liveLink: "https://rakeshpatel-dev.github.io/todo-App/",
-    sourceLink: "https://github.com/rakeshPatel-Dev/todo-App",
-    status: "Completed",
-    icons: [
-      { icon: FaHtml5, tooltip: "HTML5", color: "#e34f26" },
-      { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
-      { icon: RiTailwindCssFill, tooltip: "TailwindCSS", color: "#38bdf8" },
-    ],
-  },
-
-  {
-    id: "find-user",
-    image: "/public/images/user finder.webp",
-    title: "Find User Feature",
-    description:
-      "A reusable search component to find users or items by name or keyword.",
-    type: "feature",
-    typeColor: "#facc15",
-    liveLink: "#",
-    sourceLink: "https://github.com/rakeshPatel-Dev/User-Finder",
-    status: "Completed",
-    icons: [
-      { icon: IoSearch, tooltip: "Search Logic", color: "#facc15" },
-      { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
-    ],
-  },
-
-  {
     id: "love-confession",
     image: "/public/images/proposeme.webp",
     title: "Love Confession Website",
@@ -168,4 +153,5 @@ export const projectData: ProjectType[] = [
       { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
     ],
   },
+  
 ];
