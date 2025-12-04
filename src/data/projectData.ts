@@ -47,7 +47,7 @@ export const projectData: ProjectType[] = [
 
   {
     id: "imagetoolkit",
-    image: "/images/imagetoolkit.webp",
+    image: "/images/toolkit.webp",
     title: "Image Toolkit",
     description:
       "A powerful image toolkit to resize, compress, convert and crop images instantly.",
