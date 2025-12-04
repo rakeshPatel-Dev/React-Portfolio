@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { projectData } from "@/data/projectData";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-import SpotlightCard from "../ui/SpotlightCard";
+import SpotlightCard from "../ui/spotlightCard";
 
 const ProjectSec = () => {
   const navigate = useNavigate();
