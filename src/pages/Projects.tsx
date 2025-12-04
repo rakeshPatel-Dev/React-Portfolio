@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { projectData } from "@/data/projectData";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../components/ui/tooltip";
 import SpotlightCard from "../components/ui/SpotlightCard";
-import LazyImageWithSkeleton from "@/components/sections/LazyLoading";
+import LazyImageWithSkeleton from "@/components/LazyLoading";
 
 const ProjectSec = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const ProjectSec = () => {
 
   return (
     <div>
-      <section id="projects" className="flex max-w-4xl mt-25 mb-10 mx-auto flex-col gap-8">
+      <section id="projects" className="flex max-w-4xl px-6 sm:px-4 lg:px-0 mt-25 mb-10 mx-auto flex-col gap-8">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Projects

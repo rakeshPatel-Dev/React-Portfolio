@@ -1,5 +1,5 @@
 import React from 'react'
-import CallbackForm from './CallbackForm'
+import CallbackForm from '../CallbackForm'
 import SpotlightCard from '../ui/SpotlightCard'
 
 const RequestCallback = () => {

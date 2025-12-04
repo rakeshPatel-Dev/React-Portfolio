@@ -21,7 +21,7 @@ import {
 
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
+import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
 
 export function AppDock() {
   return (
@@ -65,7 +65,7 @@ export function AppDock() {
               <TooltipTrigger asChild>
                 <Link
                   to="/contact"
-                  aria-label="Contact"
+                  aria-label="Contact"  
                   className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "size-12 rounded-full")}
                 >
                   <MessageCircle className="size-5" />

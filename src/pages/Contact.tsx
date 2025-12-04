@@ -1,6 +1,6 @@
 "use client"
 
-import ContactForm from "@/components/sections/ContactForm"
+import ContactForm from "@/components/ContactForm"
 import RequestCallback from "@/components/sections/RequestCallback"
 
 export default function ContactPage() {

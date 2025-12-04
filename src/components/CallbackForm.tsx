@@ -48,7 +48,7 @@ export default function CallbackForm() {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/10 backdrop-blur-lg flex items-center justify-center z-50">
+        <div className="fixed px-4 sm:px-4 md:px-0 inset-0 bg-black/10 backdrop-blur-lg flex items-center justify-center z-50">
           <div className="border bg-primary/10 backdrop-blur-2xl rounded-xl shadow-xl p-8 w-full max-w-md relative">
             <button
               onClick={() => setIsOpen(false)}
