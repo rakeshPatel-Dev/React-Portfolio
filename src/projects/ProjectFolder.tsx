@@ -13,6 +13,7 @@ const ProjectFolder = () => {
       <img
         src={project.image}
         alt={project.title}
+        title={project.title}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div className="absolute bottom-2 left-2 right-2 bg-black/50 dark:bg-white/30 px-2 py-1 rounded-md">

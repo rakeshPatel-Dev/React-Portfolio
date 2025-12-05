@@ -1,6 +1,8 @@
 "use client";
 
 import { Route, Routes, useLocation } from "react-router-dom";
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
@@ -12,6 +14,7 @@ import { AppDock } from "./components/GlobalDock";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Preloader from "./components/Preloader";
+import useAnalytics from "./hooks/useAnalytics";
 
 // Page transition
 const pageVariants = {
@@ -23,6 +26,8 @@ const pageVariants = {
 const App = () => {
   const location = useLocation();
   const [showPreloader, setShowPreloader] = useState(true);
+
+  useAnalytics(); // ✅ Tracks SPA page views
 
   // Show preloader only on first refresh
   useEffect(() => {
@@ -76,6 +81,8 @@ const App = () => {
           <Footer />
         </>
       )}
+      <Analytics/>
+      <SpeedInsights/>
     </>
   );
 };

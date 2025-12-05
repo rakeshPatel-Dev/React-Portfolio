@@ -47,6 +47,7 @@ const ProjectSec = () => {
                   className="w-full object-cover hover:scale-110 mb-4 transition-all"
                   src={project.image}
                   alt={project.title}
+                  title={project.title}
                 />
               </div>
 

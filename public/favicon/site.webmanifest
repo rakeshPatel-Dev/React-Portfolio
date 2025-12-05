@@ -1,6 +1,6 @@
 {
   "name": "Rakesh Patel",
-  "short_name": "rakesh_site",
+  "short_name": "Rakesh",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,6 +16,6 @@
     }
   ],
   "theme_color": "#000000",
-  "background_color": "#000000",
+  "background_color": "#ffffff",
   "display": "standalone"
 }

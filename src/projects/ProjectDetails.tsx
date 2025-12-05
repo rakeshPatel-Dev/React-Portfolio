@@ -45,7 +45,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 md:p-10 space-y-10 mt-14 dark:text-white">
+    <div className="max-w-4xl mx-auto p-6 md:p-10 space-y-10 mt-20 dark:text-white">
       {/* Project Header */}
       <div className="flex flex-col gap-6">
         <h1 className=" heading-bold text-3xl md:text-4xl font-bold">{project.title}</h1>
@@ -55,6 +55,7 @@ const ProjectDetails = () => {
           <img
             src={project.image}
             alt={project.title}
+            title={project.title}
             className="w-full h-full object-cover rounded-xl transition-transform"
           />
         </div>

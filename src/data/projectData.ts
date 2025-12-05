@@ -70,7 +70,7 @@ export const projectData: ProjectType[] = [
     description: "A modern personal finance tracker to manage income, expenses, and budgets with analytics and reports.",
     type: "fullStack",
     typeColor: "#800000",
-    liveLink: "https://fintrack.vercel.app/", // your deployed Vercel link
+    liveLink: "https://fintrack-react.netlify.app/", // your deployed Vercel link
     sourceLink: "https://github.com/rakeshPatel-Dev/finTrack.git",
     status: "Completed",
     icons: [
@@ -88,7 +88,7 @@ export const projectData: ProjectType[] = [
   description: "A responsive React-based portal for managing employees, tasks, and permissions in a Dairy Company's Emergency Management System.",
   type: "fullStack",
   typeColor: "#800000",
-  liveLink: "https://ems-portal.netlify.app/", // replace with your live link
+  liveLink: "https://ems-rakesh.netlify.app/", // replace with your live link
   sourceLink: "https://github.com/rakeshPatel-Dev/EMS.git",
   status: "Completed",
   icons: [

@@ -5,9 +5,10 @@ interface LazyImageProps {
   src: string
   alt: string
   className?: string
+  title: string
 }
 
-const LazyImageWithSkeleton = ({ src, alt, className }: LazyImageProps) => {
+const LazyImageWithSkeleton = ({ src, alt, className, title }: LazyImageProps) => {
   const [loaded, setLoaded] = useState(false)
 
   return (
@@ -19,6 +20,7 @@ const LazyImageWithSkeleton = ({ src, alt, className }: LazyImageProps) => {
       <img
         src={src}
         alt={alt}
+        title={title}
         loading="lazy"
         onLoad={() => setLoaded(true)}
         className={`transition-all duration-500 ${
