@@ -58,7 +58,7 @@ const Exp = () => {
                 </div>
 
                 {/* Status */}
-                <Tooltip>
+                {/* <Tooltip>
                   <TooltipTrigger>
                     <div className="flex items-center gap-2 cursor-pointer border px-3 py-1 text-sm rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition mt-1 sm:mt-0">
                       <span className="relative flex h-3 w-3">
@@ -71,7 +71,7 @@ const Exp = () => {
                   <TooltipContent>
                     <p className="text-sm">Currently Working</p>
                   </TooltipContent>
-                </Tooltip>
+                </Tooltip> */}
               </div>
 
               {/* RIGHT */}
@@ -79,7 +79,7 @@ const Exp = () => {
                 <div className="flex items-center gap-1 justify-start sm:justify-end">
                   <MapPin className="w-4 h-4" /> Rautahat, Nepal
                 </div>
-                <p>May 2025 – Present</p>
+                <p>May 2025 – November 2025</p>
               </div>
             </div>
 
