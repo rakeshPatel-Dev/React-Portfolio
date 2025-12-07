@@ -24,14 +24,14 @@ const ProjectSec = () => {
         {/* card container */}
 
         <div className="parent-container grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2">
-             {projectData.slice(0, 4).map((project, idx) => (
-          <SpotlightCard
-            key={idx}
-            spotlightColor={`rgba(${0},${0},${140},${0.5})`}
-            className="cursor-pointer"
-            onClick={() => navigate(`/projects/${project.id}`)}
+          {projectData.slice(0, 4).map((project, idx) => (
+            <SpotlightCard
+              key={idx}
+              spotlightColor={`rgba(${0},${0},${140},${0.5})`}
+              className="cursor-pointer"
+              onClick={() => navigate(`/projects/${project.id}`)}
 
-          >
+            >
               {/* Type at top right */}
               <span
                 className="absolute z-10 top-3 right-3 px-3 py-1 rounded-full text-white backdrop-blur-2xl text-xs font-medium border border-primary/10"
@@ -112,13 +112,25 @@ const ProjectSec = () => {
 
               {/* Status + View More */}
               <div className="select-none flex items-center justify-between flex-row mt-3">
-                <div className="flex items-center gap-2 border px-3 py-1 rounded-full text-sm text-green-500 font-medium cursor-default">
+                <div
+                  className={`flex items-center gap-2 border px-3 py-1 rounded-full text-sm font-medium cursor-default ${project.status === "Completed"
+                      ? "text-green-500 border-green-500"
+                      : "text-red-500 border-red-500"
+                    }`}
+                >
                   <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+                    <span
+                      className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${project.status === "Completed" ? "bg-green-400" : "bg-red-400"
+                        }`}
+                    ></span>
+                    <span
+                      className={`relative inline-flex h-3 w-3 rounded-full ${project.status === "Completed" ? "bg-green-500" : "bg-red-500"
+                        }`}
+                    ></span>
                   </span>
                   {project.status}
                 </div>
+
 
                 <Button
                   variant="link"

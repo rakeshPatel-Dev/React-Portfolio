@@ -165,5 +165,37 @@ export const caseStudies: CaseStudy[] = [
       "Netlify or Vercel for deployment",
     ],
   },
+  {
+  id: "cinebook",
+  problem:
+    "Users wanted a simple and fast way to browse, filter, and book movie tickets online. Existing platforms were either slow, cluttered, or lacked modern UI, responsive design, and filtering features like genre and language.",
+  solution:
+    "Built a fully responsive movie booking application using React, TailwindCSS, and Node.js. Users can filter movies by genre and language, view detailed movie information (poster, banner, duration, cast, and description), and paginate through large lists of movies. Implemented backend API with Node.js & Express for movie data, integrated with a movie JSON dataset. Includes hover effects, smooth transitions with Framer Motion, and mobile-friendly design.",
+  result:
+    "Users can now easily discover and book movies online with a seamless experience. Filtering by genre and language, pagination, and smooth hover animations improve usability. The app is fully responsive, works on all devices, and provides a modern cinematic UI, enhancing the overall movie browsing and booking experience.",
+  features: [
+    "Browse movies with poster, banner, genres, duration, cast, and description",
+    "Filter movies by genre and language",
+    "Pagination for large movie lists",
+    "Hover effect with 'Book Now' button",
+    "Responsive layout for desktop and mobile",
+    "Smooth animations using Framer Motion",
+    "Duration displayed in hours and minutes",
+    "No movies found message when filter yields empty results",
+    "Light/dark theme support",
+    "Single-page navigation with React Router",
+  ],
+  techStack: [
+    "React.js",
+    "TailwindCSS",
+    "Node.js & Express for backend API",
+    "Framer Motion for animations",
+    "React Router for navigation",
+    "Vite for project setup",
+    "ESLint & Prettier",
+    "Netlify or Vercel for deployment",
+  ],
+},
+
 
 ];

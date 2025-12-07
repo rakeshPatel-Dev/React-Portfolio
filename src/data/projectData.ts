@@ -5,7 +5,7 @@ import {
 } from "react-icons/ri";
 
 import { FaYoutube, FaUnsplash, FaReact } from "react-icons/fa";
-import { SiFirebase, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { SiExpress, SiFirebase, SiNodedotjs, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { IoImage, IoSearch, IoHeart } from "react-icons/io5";
 // import { TbBrandTypescript } from "react-icons/tb";
 
@@ -27,6 +27,25 @@ export interface ProjectType {
 }
 
 export const projectData: ProjectType[] = [
+  {
+  id: "cinebook",
+  image: "/images/cinebook.webp",
+  title: "CineBook - Movie Booking App",
+  description: "A fully responsive React & Node.js-based movie booking application with filtering, pagination, and booking functionality.",
+  type: "fullStack",
+  typeColor: "#800000", // dark gray for cinema theme
+  liveLink: "https://cinebook.example.com/", // replace with your live link
+  sourceLink: "https://github.com/rakeshPatel-Dev/cinebook", // replace with your repo
+  status: "Building",
+  icons: [
+    { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
+    { icon: FaReact, tooltip: "React.js", color: "#61dafb" },
+    { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
+    { icon: SiNodedotjs, tooltip: "Node.js", color: "#339933" },
+    { icon: SiExpress, tooltip: "Express.js", color: "#000000" }
+  ],
+},
+
   {
     id: "moodymusik",
     image: "/images/moodymusik.webp",
@@ -147,7 +166,7 @@ export const projectData: ProjectType[] = [
     typeColor: "#38bdf8",
     liveLink: "#",
     sourceLink: "https://github.com/rakeshPatel-Dev/Love-Confession",
-    status: "Fun Project",
+    status: "Not Deployed",
     icons: [
       { icon: IoHeart, tooltip: "Fun Interaction", color: "#ec4899" },
       { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
