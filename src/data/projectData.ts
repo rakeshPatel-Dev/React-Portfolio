@@ -34,7 +34,7 @@ export const projectData: ProjectType[] = [
   description: "A fully responsive React & Node.js-based movie booking application with filtering, pagination, and booking functionality.",
   type: "fullStack",
   typeColor: "#800000", // dark gray for cinema theme
-  liveLink: "https://cinebook.example.com/", // replace with your live link
+  liveLink: "https://cinebook-rakesh.vercel.app/", // replace with your live link
   sourceLink: "https://github.com/rakeshPatel-Dev/cinebook", // replace with your repo
   status: "Building",
   icons: [

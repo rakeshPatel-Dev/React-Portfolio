@@ -29,17 +29,17 @@ const ProjectDetails = () => {
       <div className="min-h-screen flex-col gap-14 flex items-center justify-center text-center text-neutral-600 dark:text-neutral-300">
         <div>
 
-        <h1>Project not found, working on it...</h1>
-        <Button variant="link">
-        <Link to="/projects">
-          Go Back
-        </Link>
-        </Button>
+          <h1>Project not found, working on it...</h1>
+          <Button variant="link">
+            <Link to="/projects">
+              Go Back
+            </Link>
+          </Button>
         </div>
         <div className="flex items-center gap-20 flex-col mb-4">
-            <h1 className="text-2xl heading-bold">Explore more projects</h1>
-        <ProjectFolder/>
-          </div>
+          <h1 className="text-2xl heading-bold">Explore more projects</h1>
+          <ProjectFolder />
+        </div>
       </div>
     );
   }
@@ -179,11 +179,11 @@ const ProjectDetails = () => {
 
         {/* Back Button */}
       </div>
-  
-             <div className="flex items-center gap-20 flex-col mb-4">
-            <h1 className="text-2xl heading-bold">Explore more projects</h1>
-        <ProjectFolder/>
-          </div>
+
+      <div className="flex items-center gap-20 flex-col mb-4">
+        <h1 className="text-2xl heading-bold">Explore more projects</h1>
+        <ProjectFolder />
+      </div>
 
     </div>
   );
