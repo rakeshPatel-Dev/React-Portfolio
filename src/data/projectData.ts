@@ -36,7 +36,7 @@ export const projectData: ProjectType[] = [
   typeColor: "#800000", // dark gray for cinema theme
   liveLink: "https://cinebook-rakesh.vercel.app/", // replace with your live link
   sourceLink: "https://github.com/rakeshPatel-Dev/cinebook", // replace with your repo
-  status: "Building",
+  status: "Completed",
   icons: [
     { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
     { icon: FaReact, tooltip: "React.js", color: "#61dafb" },
