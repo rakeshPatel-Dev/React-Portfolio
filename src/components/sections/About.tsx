@@ -20,13 +20,13 @@ const About = () => {
             <Highlighter action="underline" color="#87CEFA">
               <strong>Bachelor of Information Technology Management (BITM)</strong>
               <span className="absolute flex h-2 w-2 -top-2 -right-1 mt-1">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
-          </span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+              </span>
             </Highlighter>{" "}
-            at the{" "}
+            from the{" "}
             <Highlighter action="underline" color="#FF9800">
-              <strong>Institute of Management Studies (IMS)</strong>
+              <strong>Tribhuvan University (TU)</strong>
             </Highlighter>
             , learning through hands-on projects and real problem-solving.
           </span>
