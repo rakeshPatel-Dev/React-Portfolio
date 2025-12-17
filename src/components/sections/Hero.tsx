@@ -1,8 +1,9 @@
-import { FileDown, MapPin } from "lucide-react"
+import { FileDown } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Ripple } from "../ui/ripple"
 import { Button } from "../ui/button"
 import { Highlighter } from "@/components/ui/highlighter"
+import { LocationTag } from "../ui/location-tag"
 
 
 const Hero = () => {
@@ -20,12 +21,13 @@ const Hero = () => {
         {/* Main Content */}
         <div className="relative z-10 flex flex-col items-center gap-4 px-6 animate-fade-in-up">
           {/* Floating Badge */}
-          <div className=" absolute -top-12 animate-float translate-z-10">
+          {/* <div className=" absolute -top-12 animate-float translate-z-10">
             <div className="flex items-center gap-2 dark:bg-black/20 backdrop-blur-md rounded-full px-4 py-2 text-sm text-black/70 dark:text-gray-300 shadow-lg border border-black/20 cursor-pointer animate-bounce dark:border-white/20">
               <MapPin />
               <span className="heading-normal">Bagmati, Kathmandu</span>
             </div>
-          </div>
+          </div> */}
+          <LocationTag city="Kathmandu" country="Nepal" timezone="NPT" />
           {/* Name */}
           <h1 className="heading-bold  text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight text-primary drop-shadow-lg translate-z-20 text-center">
             Rakesh Patel
@@ -41,8 +43,8 @@ const Hero = () => {
             </Highlighter>{" "}
             where design meets code,
             <Highlighter action="highlight" color="#87CEFA">
-              
-             simply and effectively.
+
+              simply and effectively.
             </Highlighter>{" "}
           </p>
           {/* Buttons */}
@@ -73,7 +75,7 @@ const Hero = () => {
         />
         <div>
 
-        <Ripple />
+          <Ripple />
         </div>
       </section>
 

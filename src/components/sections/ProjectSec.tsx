@@ -1,4 +1,4 @@
-import { Github, Globe } from "lucide-react";
+import { ArrowUpRight, Github, Globe } from "lucide-react";
 import { Button } from "../ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { projectData } from "@/data/projectData";
@@ -16,9 +16,7 @@ const ProjectSec = () => {
             Projects
           </h2>
 
-          <Button>
-            <Link to="/projects">View More</Link>
-          </Button>
+
         </div>
 
         {/* card container */}
@@ -114,8 +112,8 @@ const ProjectSec = () => {
               <div className="select-none flex items-center justify-between flex-row mt-3">
                 <div
                   className={`flex items-center gap-2 border px-3 py-1 rounded-full text-sm font-medium cursor-default ${project.status === "Completed"
-                      ? "text-green-500 border-green-500"
-                      : "text-red-500 border-red-500"
+                    ? "text-green-500 border-green-500"
+                    : "text-red-500 border-red-500"
                     }`}
                 >
                   <span className="relative flex h-3 w-3">
@@ -141,6 +139,12 @@ const ProjectSec = () => {
               </div>
             </SpotlightCard>
           ))}
+        </div>
+        <div className="flex w-full justify-end items-center">
+          <Button variant="outline">
+            <Link to="/projects">View More</Link>
+            <ArrowUpRight />
+          </Button>
         </div>
       </section>
     </div>

@@ -47,7 +47,7 @@ const Skills = () => {
               <TooltipTrigger asChild>
                 <div
                   className="
-                    group relative flex flex-col items-center justify-center 
+                    group select-none relative flex flex-col items-center justify-center 
                     gap-3 p-4 rounded-2xl border border-neutral-300/40 dark:border-neutral-700
                     bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl
                     transition-all duration-300 cursor-pointer

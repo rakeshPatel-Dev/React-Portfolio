@@ -72,6 +72,7 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/:id" element={<ProjectDetails />} />
+                <Route path="/404" element={<Page404 />} />
                 <Route path="*" element={<Page404 />} />
               </Routes>
             </motion.div>
@@ -81,8 +82,8 @@ const App = () => {
           <Footer />
         </>
       )}
-      <Analytics/>
-      <SpeedInsights/>
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 };
