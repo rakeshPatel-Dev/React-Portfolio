@@ -58,8 +58,8 @@ const Hero = () => {
               </Button>
             </Link>
             <a
-              href="/docs/Rakesh-patel_.pdf"
-              download="Rakesh-patel_CV.pdf"
+              href="/docs/Rakesh_patel_CV.pdf"
+              download="Rakesh-Patel_CV.pdf"
             >
               <Button variant={"outline"} size={"lg"} className=" cursor-pointer">
 
