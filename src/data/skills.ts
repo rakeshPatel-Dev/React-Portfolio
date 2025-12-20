@@ -1,6 +1,4 @@
 import {
-  FaHtml5,
-  FaCss3Alt,
   FaJs,
   FaReact,
   FaGithub,
@@ -9,16 +7,6 @@ import {
 import { SiTailwindcss, SiNextdotjs, SiFirebase } from "react-icons/si";
 
 export const skills = [
-  {
-    title: "HTML5",
-    icon: FaHtml5,
-    description: "Semantic structure & accessibility",
-  },
-  {
-    title: "CSS3",
-    icon: FaCss3Alt,
-    description: "Layouts, animations & responsiveness",
-  },
   {
     title: "JavaScript",
     icon: FaJs,
