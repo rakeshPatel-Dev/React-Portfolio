@@ -3,8 +3,10 @@ import {
   FaReact,
   FaGithub,
   FaFigma,
+  FaNodeJs,
+  
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiFirebase } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiFirebase,SiExpress } from "react-icons/si";
 
 export const skills = [
   {
@@ -25,6 +27,16 @@ export const skills = [
   {
     title: "Next.js",
     icon: SiNextdotjs,
+    description: "Full-stack React framework",
+  },
+  {
+    title: "Node.js",
+    icon: FaNodeJs,
+    description: "Full-stack React framework",
+  },
+  {
+    title: "Express.js",
+    icon: SiExpress,
     description: "Full-stack React framework",
   },
   {

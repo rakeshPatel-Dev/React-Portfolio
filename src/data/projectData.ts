@@ -6,7 +6,7 @@ import {
 
 import { FaYoutube, FaUnsplash, FaReact } from "react-icons/fa";
 import { SiExpress, SiFirebase, SiNodedotjs, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
-import { IoImage, IoSearch, IoHeart } from "react-icons/io5";
+import { IoImage, IoSearch } from "react-icons/io5";
 // import { TbBrandTypescript } from "react-icons/tb";
 
 export interface ProjectType {
@@ -153,23 +153,6 @@ export const projectData: ProjectType[] = [
       { icon: IoSearch, tooltip: "Search Feature", color: "#facc15" },
       { icon: FaUnsplash, tooltip: "Unsplash API", color: "#0ea5e9" },
       { icon: RiReactjsFill, tooltip: "React", color: "#61dafb" },
-    ],
-  },
-
-  {
-    id: "love-confession",
-    image: "/images/proposeme.webp",
-    title: "Love Confession Website",
-    description:
-      "A fun micro-interaction project where the 'No' button dodges you.",
-    type: "microapp",
-    typeColor: "#38bdf8",
-    liveLink: "#",
-    sourceLink: "https://github.com/rakeshPatel-Dev/Love-Confession",
-    status: "Not Deployed",
-    icons: [
-      { icon: IoHeart, tooltip: "Fun Interaction", color: "#ec4899" },
-      { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
     ],
   },
   

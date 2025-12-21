@@ -4,8 +4,7 @@ const About = () => {
   return (
     <div className="relative">
       {/* Section Title */}
-      <h1 className="heading-bold text-2xl mb-4 group">
-        <span className="group-hover:opacity-100 opacity-0 text-2xl font-bold">#</span>
+      <h1 className="heading-bold text-2xl mb-4">
         About me
       </h1>
 

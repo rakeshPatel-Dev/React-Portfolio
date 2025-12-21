@@ -7,7 +7,7 @@ const GithubActivity = () => {
   return (
     <div className="bg-white dark:bg-[#0A0A0A] py-10 rounded-xl shadow-xl max-w-5xl mx-auto text-black dark:text-white">
       {/* Header */}
-      <h2 className="text-3xl font-bold mb-6">GitHub Activity</h2>
+      <h2 className="text-2xl heading-bold mb-6">GitHub Activity</h2>
 
       {/* Contribution Graph */}
       <div className="overflow-x-auto p-2">

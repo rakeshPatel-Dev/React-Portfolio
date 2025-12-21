@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { projectData } from "@/data/projectData";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import SpotlightCard from "../ui/spotlightCard";
+import LazyImageWithSkeleton from "../LazyLoading";
 
 const ProjectSec = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const ProjectSec = () => {
     <div>
       <section id="projects" className="flex flex-col gap-8">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2xl mt-6 heading-bold">
             Projects
           </h2>
 
@@ -25,7 +26,7 @@ const ProjectSec = () => {
           {projectData.slice(0, 4).map((project, idx) => (
             <SpotlightCard
               key={idx}
-              spotlightColor={`rgba(${0},${0},${140},${0.5})`}
+              spotlightColor={`rgba(${0},${0},${110},${0.5})`}
               className="cursor-pointer"
               onClick={() => navigate(`/projects/${project.id}`)}
 
@@ -41,17 +42,18 @@ const ProjectSec = () => {
 
               {/* Project Image */}
               <div className="overflow-hidden rounded-xl">
-                <img
-                  className="w-full object-cover hover:scale-110 mb-4 transition-all"
+                <LazyImageWithSkeleton
                   src={project.image}
                   alt={project.title}
                   title={project.title}
+                  className="w-full object-cover hover:scale-110 mb-4 transition-all rounded-xl"
                 />
+
               </div>
 
               {/* Title + Live/Github Icons */}
               <div className="flex items-center justify-between">
-                <h1 className="text-2xl font-bold mb-4">{project.title}</h1>
+                <h1 className="text-2xl heading-bold mb-4">{project.title}</h1>
                 <div className="flex text-neutral-600/80 items-center gap-3">
                   <Tooltip>
                     <TooltipTrigger>
@@ -89,7 +91,7 @@ const ProjectSec = () => {
               {/* Technologies */}
               <div className="flex flex-col gap-2 mb-4">
                 <h1>Technologies</h1>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center  gap-4">
                   {project.icons.map((iconData, idx) => {
                     const Icon = iconData.icon;
                     return (
@@ -140,7 +142,7 @@ const ProjectSec = () => {
             </SpotlightCard>
           ))}
         </div>
-        <div className="flex w-full justify-end items-center">
+        <div className="flex w-full justify-end heading-medium items-center">
           <Button variant="outline">
             <Link to="/projects">View More</Link>
             <ArrowUpRight />

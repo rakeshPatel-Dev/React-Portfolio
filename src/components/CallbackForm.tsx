@@ -48,7 +48,7 @@ export default function CallbackForm() {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed px-4 sm:px-4 md:px-0 inset-0 bg-black/10 backdrop-blur-lg flex items-center justify-center z-50">
+        <div className="fixed px-4 sm:px-4 md:px-0 inset-0 bg-black/10 backdrop-blur-xl flex items-center justify-center z-50">
           <div className="border bg-primary/10 backdrop-blur-2xl rounded-xl shadow-xl p-8 w-full max-w-md relative">
             <button
               onClick={() => setIsOpen(false)}
@@ -70,7 +70,7 @@ export default function CallbackForm() {
                 {/* <FieldDescription>Enter your full name</FieldDescription> */}
                 <FieldContent>
                   <input
-                  title="Enter Name"
+                    title="Enter Name"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -85,7 +85,7 @@ export default function CallbackForm() {
                 {/* <FieldDescription>Your contact number</FieldDescription> */}
                 <FieldContent>
                   <input
-                  title="Enter Phone"
+                    title="Enter Phone"
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -112,8 +112,8 @@ export default function CallbackForm() {
                         onSelect={setDate}
                         className="rounded-md border"
                       />
-                      <select 
-                      title="Select Day & time"
+                      <select
+                        title="Select Day & time"
                         value={time}
                         onChange={(e) => setTime(e.target.value)}
                         className="w-full  dark:bg-[#0A0A0A] rounded-md border p-2"
@@ -133,8 +133,8 @@ export default function CallbackForm() {
                 <FieldLabel>Message (Optional)</FieldLabel>
                 {/* <FieldDescription>Write any additional info</FieldDescription> */}
                 <FieldContent>
-                  <textarea 
-                  title="Message"
+                  <textarea
+                    title="Message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full rounded-md border border-primary/50 p-2 text-primary"

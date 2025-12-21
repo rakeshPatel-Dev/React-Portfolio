@@ -16,7 +16,7 @@ export default function DemoOne() {
 
         <AnimatedContainer
           delay={0.4}
-          className="grid grid-cols-1 divide-x divide-y rounded-2xl divide-dashed border border-dashed sm:grid-cols-2 md:grid-cols-3"
+          className="grid grid-cols-2 divide-x divide-y rounded-2xl divide-dashed border border-dashed sm:grid-cols-2 md:grid-cols-3"
         >
           {skills.map((skill, i) => (
             <SkillCard key={i} skill={skill} />

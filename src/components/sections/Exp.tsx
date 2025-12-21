@@ -18,8 +18,7 @@ const Exp = () => {
   return (
     <div className="mt-10 mb-16">
       {/* Section Title */}
-      <h2 className="text-2xl group font-semibold mb-6 flex items-center gap-2 flex-wrap">
-        <span className="group-hover:opacity-100 opacity-0 text-2xl font-bold">#</span>
+      <h2 className="text-2xl heading-bold mb-6 ">
         Experience
       </h2>
 
@@ -56,22 +55,6 @@ const Exp = () => {
                     </TooltipTrigger>
                   </Tooltip>
                 </div>
-
-                {/* Status */}
-                {/* <Tooltip>
-                  <TooltipTrigger>
-                    <div className="flex items-center gap-2 cursor-pointer border px-3 py-1 text-sm rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition mt-1 sm:mt-0">
-                      <span className="relative flex h-3 w-3">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
-                      </span>
-                      Working
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p className="text-sm">Currently Working</p>
-                  </TooltipContent>
-                </Tooltip> */}
               </div>
 
               {/* RIGHT */}

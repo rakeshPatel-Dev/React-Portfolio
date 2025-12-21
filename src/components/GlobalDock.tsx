@@ -65,7 +65,7 @@ export function AppDock() {
               <TooltipTrigger asChild>
                 <Link
                   to="/contact"
-                  aria-label="Contact"  
+                  aria-label="Contact"
                   className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "size-12 rounded-full")}
                 >
                   <MessageCircle className="size-5" />
@@ -83,6 +83,7 @@ export function AppDock() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
+                  title="GitHub"
                   rel="noopener"
                   href="https://github.com/rakeshPatel-Dev"
                   target="_blank"
@@ -99,6 +100,7 @@ export function AppDock() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
+                  title="LinkedIn"
                   rel="noopener"
                   href="https://linkedin.com/in/rakeshpatel-developer"
                   target="_blank"
@@ -115,6 +117,7 @@ export function AppDock() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
+                  title="Email"
                   href="mailto:rk5080976@gmail.com"
                   className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "size-12 rounded-full")}
                 >
@@ -135,7 +138,7 @@ export function AppDock() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <div>
-                  <AnimatedThemeToggler className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "size-12 cursor-pointer rounded-full")}/>
+                  <AnimatedThemeToggler className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "size-12 cursor-pointer rounded-full")} />
                 </div>
               </TooltipTrigger>
               <TooltipContent>Theme</TooltipContent>
