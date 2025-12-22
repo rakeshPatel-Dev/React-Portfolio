@@ -158,11 +158,11 @@ export default function ContactForm() {
         </FieldError>
       </Field>
 
-      <div className="flex items-center w-full  gap-4 flex-row">
+      <div className="flex items-center max-w-6xl w-full gap-4 flex-row">
         <Button onClick={handleClear} className="w-1/4" variant="outline">
           Clear Fields
         </Button>
-        <Button type="submit" className="w-3/4" disabled={state.submitting}>
+        <Button type="submit" className="flex-1" disabled={state.submitting}>
           {state.submitting ? "Sending..." : "Send Message"}
         </Button>
       </div>

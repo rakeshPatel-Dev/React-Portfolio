@@ -1,57 +1,55 @@
 import {
   FaJs,
   FaReact,
-  FaGithub,
-  FaFigma,
   FaNodeJs,
-  
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiFirebase,SiExpress } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiFirebase,
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
 
 export const skills = [
   {
     title: "JavaScript",
     icon: FaJs,
-    description: "Logic, events & async flows",
+    description: "Core logic, async programming & DOM handling",
   },
   {
     title: "Tailwind CSS",
     icon: SiTailwindcss,
-    description: "Utility-first styling system",
+    description: "Utility-first CSS for rapid UI development",
   },
   {
     title: "React",
     icon: FaReact,
-    description: "Component-driven UI",
+    description: "Component-based frontend development",
   },
   {
     title: "Next.js",
     icon: SiNextdotjs,
-    description: "Full-stack React framework",
+    description: "React framework with SSR & API routes",
   },
   {
     title: "Node.js",
     icon: FaNodeJs,
-    description: "Full-stack React framework",
+    description: "Backend runtime for scalable server-side apps",
   },
   {
     title: "Express.js",
     icon: SiExpress,
-    description: "Full-stack React framework",
+    description: "Minimal backend framework for REST APIs",
+  },
+  {
+    title: "MongoDB",
+    icon: SiMongodb,
+    description: "NoSQL database for flexible data storage",
   },
   {
     title: "Firebase",
     icon: SiFirebase,
-    description: "Auth, DB & hosting",
-  },
-  {
-    title: "Git & GitHub",
-    icon: FaGithub,
-    description: "Version Control, Collaboration & CI",
-  },
-  {
-    title: "Figma",
-    icon: FaFigma,
-    description: "UI/UX design & prototyping",
+    description: "Authentication, database & hosting",
   },
 ];
