@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -52,15 +52,7 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
   const [formData, setFormData] = useState<Record<string, string>>({})
   const [sending, setSending] = useState(false)
 
-  const step = steps[currentStep]
-
-  /* lock body scroll if this form is used inside modal */
-  useEffect(() => {
-    document.body.style.overflow = "hidden"
-    return () => {
-      document.body.style.overflow = ""
-    }
-  }, [])
+  const step = steps[currentStep];
 
   /* generate time slots (15 min interval) */
   const times = Array.from({ length: 24 * 4 }, (_, i) => {
@@ -97,16 +89,14 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
     if (sending) return
     setSending(true)
 
-    const message = `
-Hi, my name is ${formData.name}.
-Phone: ${formData.phone}
-
-Preferred callback:
-${date ? format(date, "PPP") : "Any day"} at ${time}
-
-Message:
-${formData.message || "—"}
-`.trim()
+    const message = [
+      `Hey, I'm ${formData.name}.`,
+      `Phone: ${formData.phone}`,
+      `Can you call me back on ${date ? format(date, "PPP") : "any day"} at ${time}?`,
+      formData.message ? `Oh, and ${formData.message}` : "No rush — just wanted to connect!"
+    ]
+      .filter(Boolean)
+      .join(" ");
 
     const encoded = encodeURIComponent(message)
 

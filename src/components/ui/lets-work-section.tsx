@@ -271,7 +271,7 @@ export function LetsWorkTogether() {
       </div>
       {showCallbackForm && (
         <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/90 backdrop-blur-3xl animate-in fade-in">
-          <div className="relative flex flex-col gap-10">
+          <div className="relative flex flex-col items-center justify-center gap-10">
 
             {/* CLOSE */}
             <div className=" flex flex-row items-center w-full justify-between">
