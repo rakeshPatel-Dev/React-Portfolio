@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -11,22 +11,32 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { cn } from "@/lib/utils"
-import { CheckIcon, ArrowRightIcon, CalendarDays, CalendarClock } from "lucide-react"
+import {
+  CheckIcon,
+  ArrowRightIcon,
+  CalendarDays,
+  CalendarClock,
+} from "lucide-react"
 import { format } from "date-fns"
 
 type Step = {
   id: number
   label: string
-  field: string
+  field: "name" | "phone" | "datetime" | "message"
   required: boolean
 }
 
 type MultiStepFormProps = {
   onSuccess?: () => void
 }
-
 
 const steps: Step[] = [
   { id: 1, label: "Full name *", field: "name", required: true },
@@ -44,20 +54,30 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
 
   const step = steps[currentStep]
 
+  /* lock body scroll if this form is used inside modal */
+  useEffect(() => {
+    document.body.style.overflow = "hidden"
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [])
+
+  /* generate time slots (15 min interval) */
   const times = Array.from({ length: 24 * 4 }, (_, i) => {
     const h = String(Math.floor(i / 4)).padStart(2, "0")
     const m = String((i % 4) * 15).padStart(2, "0")
     return `${h}:${m}`
   })
 
-
   const isStepValid = () => {
     if (!step.required) return true
-    if (step.field === "datetime") return date && time
-    return formData[step.field]?.trim()
+    if (step.field === "datetime") return Boolean(date && time)
+    return Boolean(formData[step.field]?.trim())
   }
 
   const handleNext = () => {
+    if (!isStepValid()) return
+
     if (currentStep < steps.length - 1) {
       setCurrentStep((s) => s + 1)
     } else {
@@ -65,21 +85,38 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
     }
   }
 
+  const resetForm = () => {
+    setCurrentStep(0)
+    setFormData({})
+    setDate(undefined)
+    setTime("")
+    setSending(false)
+  }
+
   const sendToWhatsApp = () => {
     if (sending) return
     setSending(true)
 
     const message = `
-      Hey Rakesh! I'm ${formData.name} and my phone number is ${formData.phone}. I want you to call me back on ${date ? format(date, "PPP") : "Any day works!"} at ${time}.
-      Quick message: ${formData.message || "Just wanna chat about things!"}
-      `.trim()
+Hi, my name is ${formData.name}.
+Phone: ${formData.phone}
+
+Preferred callback:
+${date ? format(date, "PPP") : "Any day"} at ${time}
+
+Message:
+${formData.message || "—"}
+`.trim()
 
     const encoded = encodeURIComponent(message)
+
     window.open(
-      `https://wa.me/9825256068?text=${encoded}`,
+      `https://wa.me/9779825256068?text=${encoded}`,
       "_blank"
     )
+
     onSuccess?.()
+    resetForm()
   }
 
   return (
@@ -90,13 +127,17 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
           <div key={s.id} className="flex items-center gap-3">
             <div
               className={cn(
-                "flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium",
+                "flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium transition-colors",
                 i < currentStep && "bg-foreground/10",
                 i === currentStep && "bg-foreground text-background",
                 i > currentStep && "bg-muted text-muted-foreground"
               )}
             >
-              {i < currentStep ? <CheckIcon className="h-4 w-4" /> : s.id}
+              {i < currentStep ? (
+                <CheckIcon className="h-4 w-4" />
+              ) : (
+                s.id
+              )}
             </div>
             {i < steps.length - 1 && (
               <div className="h-px w-10 bg-border" />
@@ -109,32 +150,31 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
       <div className="space-y-4">
         <Label className="text-lg font-medium">{step.label}</Label>
 
-        {/* NAME */}
         {step.field === "name" && (
           <Input
+            autoFocus
             placeholder="Your full name"
             value={formData.name || ""}
             onChange={(e) =>
               setFormData({ ...formData, name: e.target.value })
             }
-            autoFocus
           />
         )}
 
-        {/* PHONE */}
         {step.field === "phone" && (
           <Input
+            autoFocus
             type="tel"
+            inputMode="numeric"
+            pattern="[0-9+ ]{10,15}"
             placeholder="+977 98XXXXXXXX"
             value={formData.phone || ""}
             onChange={(e) =>
               setFormData({ ...formData, phone: e.target.value })
             }
-            autoFocus
           />
         )}
 
-        {/* DATE + TIME */}
         {step.field === "datetime" && (
           <div className="space-y-3">
             <Popover>
@@ -145,12 +185,7 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
                 </Button>
               </PopoverTrigger>
 
-              <PopoverContent
-                className="p-0 z-9999"
-                side="bottom"
-                align="start"
-                avoidCollisions={false}
-              >
+              <PopoverContent className="p-0 z-50">
                 <Calendar
                   mode="single"
                   selected={date}
@@ -161,25 +196,13 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
               </PopoverContent>
             </Popover>
 
-
             <Select value={time} onValueChange={setTime}>
-              <SelectTrigger className="h-12 w-full rounded-md flex items-center gap-2">
+              <SelectTrigger className="h-12 w-full flex items-center gap-2">
                 <CalendarClock className="h-4 w-4 text-muted-foreground" />
-
-                <SelectValue
-                  placeholder={
-                    <span className="text-muted-foreground text-left font-bold w-full">
-                      Select time
-                    </span>
-                  }
-                />
+                <SelectValue placeholder="Select time" />
               </SelectTrigger>
 
-              <SelectContent
-                position="popper"
-                sideOffset={8}
-                className="max-h-64 z-9999 overflow-auto"
-              >
+              <SelectContent className="max-h-64 z-50 overflow-auto">
                 {times.map((t) => (
                   <SelectItem key={t} value={t}>
                     {t}
@@ -187,13 +210,9 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
                 ))}
               </SelectContent>
             </Select>
-
-
-
           </div>
         )}
 
-        {/* MESSAGE */}
         {step.field === "message" && (
           <Textarea
             placeholder="Anything you want to add..."
@@ -203,19 +222,29 @@ export function MultiStepForm({ onSuccess }: MultiStepFormProps) {
             }
           />
         )}
+
+        {!isStepValid() && (
+          <p className="text-sm text-destructive">
+            This field is required
+          </p>
+        )}
       </div>
 
       {/* Actions */}
       <Button
         onClick={handleNext}
-        disabled={!isStepValid()}
+        disabled={!isStepValid() || sending}
         className="w-full group"
       >
-        {currentStep === steps.length - 1 ? "Send via WhatsApp" : "Continue"}
+        {sending
+          ? "Opening WhatsApp..."
+          : currentStep === steps.length - 1
+            ? "Send via WhatsApp"
+            : "Continue"}
         <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
       </Button>
 
-      {currentStep > 0 && (
+      {currentStep > 0 && !sending && (
         <button
           onClick={() => setCurrentStep((s) => s - 1)}
           className="w-full text-sm text-muted-foreground hover:text-foreground"
