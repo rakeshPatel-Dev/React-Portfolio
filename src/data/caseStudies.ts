@@ -133,6 +133,39 @@ export const caseStudies: CaseStudy[] = [
       "Vercel for deployment",
     ],
   },
+  {
+  id: "ishirable",
+  problem:
+    "Users struggled to monitor their GitHub activity, contributions, and project growth efficiently. Manual profile checks lacked insights into hiring potential and skills visibility.",
+  solution:
+    "Developed isHirable, a modern web app using React, Next.js, TypeScript, and TailwindCSS, which automatically analyzes public GitHub activity. Users receive actionable insights, visual summaries of contributions, and recruiter-focused metrics. Features include project analysis, commit trends, language usage breakdown, and profile recommendations, all with a responsive design.",
+  result:
+    "Users can now understand how their GitHub profiles appear to recruiters in real-time. The app highlights strengths, gaps, and improvement opportunities, helping developers optimize portfolios for higher job potential.",
+  features: [
+    "Analyze GitHub repositories and contributions automatically",
+    "Visual summaries of commits, PRs, and project activity",
+    "Language usage breakdown and tech stack insights",
+    "Highlight profile strengths and weaknesses",
+    "Receive actionable suggestions to improve hiring potential",
+    "Responsive design for desktop and mobile",
+    "Dark mode support",
+    "Real-time analysis with minimal delays",
+    "Downloadable summary reports",
+    "Secure connection via GitHub OAuth",
+  ],
+  techStack: [
+    "React.js & Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "GitHub API",
+    "Lucide-react for icons",
+    "Axios for data fetching",
+    "Vercel for deployment",
+    "ESLint & Prettier",
+    "Framer Motion for animations",
+  ],
+},
+
 
   {
     id: "photolab",

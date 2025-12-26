@@ -5,7 +5,7 @@ import {
 } from "react-icons/ri";
 
 import { FaYoutube, FaUnsplash, FaReact } from "react-icons/fa";
-import { SiExpress, SiFirebase, SiNodedotjs, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { SiExpress, SiFirebase, SiGithub, SiNextdotjs, SiNodedotjs, SiOpenai, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { IoImage, IoSearch } from "react-icons/io5";
 // import { TbBrandTypescript } from "react-icons/tb";
 
@@ -27,24 +27,46 @@ export interface ProjectType {
 }
 
 export const projectData: ProjectType[] = [
+   {
+    id: "ishirable",
+    image: "/images/ishirable.webp",
+    title: "isHirable – GitHub Profile Analyzer",
+    description:
+      "An AI-powered platform that analyzes public GitHub activity and converts it into recruiter-focused hiring signals with clear improvement insights.",
+    type: "fullStack",
+    typeColor: "#800000", // blue = trust + tech
+    liveLink: "https://ishirable.com", // update if different
+    sourceLink: "https://github.com/rakeshpatel-dev/ishirable", // optional / private if needed
+    status: "Building",
+    icons: [
+      { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
+      { icon: SiNextdotjs, tooltip: "React / Next.js", color: "#61dafb" },
+      { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
+      { icon: SiNodedotjs, tooltip: "Node.js", color: "#339933" },
+      { icon: SiGithub, tooltip: "GitHub API", color: "#000000" },
+      { icon: SiOpenai, tooltip: "AI Analysis", color: "#10a37f" }
+    ],
+  },
   {
-  id: "cinebook",
-  image: "/images/cinebook.webp",
-  title: "CineBook - Movie Booking App",
-  description: "A fully responsive React & Node.js-based movie booking application with filtering, pagination, and booking functionality.",
-  type: "fullStack",
-  typeColor: "#800000", // dark gray for cinema theme
-  liveLink: "https://cinebook-rakesh.vercel.app/", // replace with your live link
-  sourceLink: "https://github.com/rakeshPatel-Dev/cinebook", // replace with your repo
-  status: "Completed",
-  icons: [
-    { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
-    { icon: FaReact, tooltip: "React.js", color: "#61dafb" },
-    { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
-    { icon: SiNodedotjs, tooltip: "Node.js", color: "#339933" },
-    { icon: SiExpress, tooltip: "Express.js", color: "#000000" }
-  ],
-},
+    id: "cinebook",
+    image: "/images/cinebook.webp",
+    title: "CineBook - Movie Booking App",
+    description: "A fully responsive React & Node.js-based movie booking application with filtering, pagination, and booking functionality.",
+    type: "fullStack",
+    typeColor: "#800000", // dark gray for cinema theme
+    liveLink: "https://cinebook-rakesh.vercel.app/", // replace with your live link
+    sourceLink: "https://github.com/rakeshPatel-Dev/cinebook", // replace with your repo
+    status: "Completed",
+    icons: [
+      { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
+      { icon: FaReact, tooltip: "React.js", color: "#61dafb" },
+      { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
+      { icon: SiNodedotjs, tooltip: "Node.js", color: "#339933" },
+      { icon: SiExpress, tooltip: "Express.js", color: "#000000" }
+    ],
+  },
+ 
+
 
   {
     id: "moodymusik",
@@ -80,7 +102,7 @@ export const projectData: ProjectType[] = [
       { icon: RiReactjsFill, tooltip: "React", color: "#61dafb" },
       { icon: SiShadcnui, tooltip: "Shadcn UI", color: "#7c3aed" },
     ],
-  }, 
+  },
 
   {
     id: "fintrack",
@@ -100,23 +122,23 @@ export const projectData: ProjectType[] = [
     ],
   },
 
- {
-  id: "ems-portal",
-  image: "/images/ems.webp",
-  title: "EMS Admin & Employee Portal",
-  description: "A responsive React-based portal for managing employees, tasks, and permissions in a Dairy Company's Emergency Management System.",
-  type: "fullStack",
-  typeColor: "#800000",
-  liveLink: "https://ems-rakesh.netlify.app/", // replace with your live link
-  sourceLink: "https://github.com/rakeshPatel-Dev/EMS.git",
-  status: "Completed",
-  icons: [
-    { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
-    { icon: FaReact, tooltip: "React.js", color: "#61dafb" },
-    { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
-    { icon: SiFirebase, tooltip: "Firebase (Firestore & Auth)", color: "#ffcb2b" }
-  ],
-},
+  {
+    id: "ems-portal",
+    image: "/images/ems.webp",
+    title: "EMS Admin & Employee Portal",
+    description: "A responsive React-based portal for managing employees, tasks, and permissions in a Dairy Company's Emergency Management System.",
+    type: "fullStack",
+    typeColor: "#800000",
+    liveLink: "https://ems-rakesh.netlify.app/", // replace with your live link
+    sourceLink: "https://github.com/rakeshPatel-Dev/EMS.git",
+    status: "Completed",
+    icons: [
+      { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
+      { icon: FaReact, tooltip: "React.js", color: "#61dafb" },
+      { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
+      { icon: SiFirebase, tooltip: "Firebase (Firestore & Auth)", color: "#ffcb2b" }
+    ],
+  },
 
 
   {
@@ -155,5 +177,5 @@ export const projectData: ProjectType[] = [
       { icon: RiReactjsFill, tooltip: "React", color: "#61dafb" },
     ],
   },
-  
+
 ];
