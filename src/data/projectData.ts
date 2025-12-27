@@ -129,7 +129,7 @@ export const projectData: ProjectType[] = [
     description: "A responsive React-based portal for managing employees, tasks, and permissions in a Dairy Company's Emergency Management System.",
     type: "fullStack",
     typeColor: "#800000",
-    liveLink: "https://ems-rakesh.netlify.app/", // replace with your live link
+    liveLink: "https://ems-rakesh.vercel.app/", // replace with your live link
     sourceLink: "https://github.com/rakeshPatel-Dev/EMS.git",
     status: "Completed",
     icons: [

@@ -5,7 +5,7 @@ import type { ProjectType } from "@/data/projectData";
 import { caseStudies } from "@/data/caseStudies";
 import type { CaseStudy } from "@/data/caseStudies";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
-import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { Github, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion"; // or from Radix if directly
 import ProjectFolder from "./ProjectFolder";
+import { SiNextdotjs } from "react-icons/si";
 
 
 const ProjectDetails = () => {
@@ -158,7 +159,7 @@ const ProjectDetails = () => {
                 className="flex items-center gap-2 px-3 py-1 border rounded-xl text-sm hover:bg-primary/10 transition"
               >
                 {tech.toLowerCase().includes("react") && <FaReact className="w-5 h-5 text-[#61dafb]" />}
-                {tech.toLowerCase().includes("js") && <FaJs className="w-5 h-5 text-[#f7df1e]" />}
+                {tech.toLowerCase().includes("js") && <SiNextdotjs className="w-5 h-5 text-[#f7df1e]" />}
                 {tech.toLowerCase().includes("html") && <FaHtml5 className="w-5 h-5 text-[#E34F26]" />}
                 {tech.toLowerCase().includes("css") && <FaCss3Alt className="w-5 h-5 text-[#1572B6]" />}
                 {tech.toLowerCase().includes("tailwind") && <RiTailwindCssFill className="w-5 h-5 text-[#38bdf8]" />}
