@@ -1,4 +1,4 @@
-import GitHubStreak from "./GithubSteak";
+import GitHubStreak from "./GithubStreak";
 
 
 const GithubActivity = () => {
