@@ -1,5 +1,4 @@
 import {
-  FaJs,
   FaReact,
   FaNodeJs,
 } from "react-icons/fa";
@@ -9,13 +8,14 @@ import {
   SiFirebase,
   SiExpress,
   SiMongodb,
+  SiTypescript,
 } from "react-icons/si";
 
 export const skills = [
   {
-    title: "JavaScript",
-    icon: FaJs,
-    description: "Core logic, async programming & DOM handling",
+    title: "TypeScript",
+    icon: SiTypescript,
+    description: "Type safety for cleaner logic and reliable UI code",
   },
   {
     title: "Tailwind CSS",

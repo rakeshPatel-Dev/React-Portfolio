@@ -11,7 +11,7 @@ import Projects from "./pages/Projects";
 import ProjectDetails from "./projects/ProjectDetails";
 import Page404 from "./pages/Page404";
 
-import Header from "./components/sections/Header";
+// import Header from "./components/sections/Header";
 import Footer from "./components/sections/Footer";
 import { AppDock } from "./components/GlobalDock";
 import useAnalytics from "./hooks/useAnalytics";
@@ -27,7 +27,7 @@ const App = () => {
     <>
       <ScrollToTop />
       <Toaster />
-      <Header />
+      {/* <Header /> */}
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

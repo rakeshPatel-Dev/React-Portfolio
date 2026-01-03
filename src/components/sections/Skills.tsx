@@ -9,9 +9,9 @@ export default function DemoOne() {
     <section className="py-10">
       <div className="mx-auto w-full max-w-5xl space-y-8">
         <AnimatedContainer className=" mb-8 text-left">
-          <h2 className="text-2xl heading-bold font-bold tracking-wide text-balance">
+          <h1 className="text-2xl heading-bold font-bold tracking-wide text-balance">
             Skills
-          </h2>
+          </h1>
         </AnimatedContainer>
 
         <AnimatedContainer

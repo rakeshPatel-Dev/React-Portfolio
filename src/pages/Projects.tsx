@@ -55,10 +55,11 @@ const ProjectSec = () => {
                 {/* Title + Live/Github Icons */}
                 <div className="flex items-center justify-between">
                   <h1 className="text-2xl heading-bold mb-4">{project.title}</h1>
-                  <div className="flex text-neutral-600/80 items-center gap-3">
+                  <div className="flex text-muted-foreground items-center gap-3">
                     <Tooltip>
                       <TooltipTrigger>
                         <a
+                          title="website link"
                           href={project.liveLink}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -73,12 +74,13 @@ const ProjectSec = () => {
                     <Tooltip>
                       <TooltipTrigger>
                         <a
+                          title="Github link"
                           href={project.sourceLink}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
                         >
-                          <Github className="hover:text-primary transition-all cursor-pointer w-5 h-5 hover:scale-115" />
+                          <Github className="hover:text-primary  transition-all cursor-pointer w-5 h-5 hover:scale-115" />
                         </a>
                       </TooltipTrigger>
                       <TooltipContent>Source Code</TooltipContent>
@@ -87,7 +89,7 @@ const ProjectSec = () => {
                 </div>
 
                 {/* Description */}
-                <p className="font-body text-neutral-500/80 mb-4">{project.description}</p>
+                <p className="font-body text-muted-foreground mb-4">{project.description}</p>
 
                 {/* Technologies */}
                 <div className="flex flex-col gap-2 mb-4">
@@ -99,7 +101,7 @@ const ProjectSec = () => {
                         <Tooltip key={idx}>
                           <TooltipTrigger>
                             <Icon
-                              className="w-6 h-6 cursor-pointer hover:scale-110 transition-all"
+                              className="w-6 h-6 hover:scale-110 transition-all"
                               style={{ color: iconData.color }}
                               onClick={(e) => e.stopPropagation()}
                             />
@@ -134,6 +136,7 @@ const ProjectSec = () => {
 
 
                   <Button
+                    className="text-muted-foreground hover:text-primary cursor-pointer transition-all"
                     variant="link"
                     onClick={() => navigate(`/projects/${project.id}`)}
                   >

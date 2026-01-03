@@ -18,9 +18,9 @@ const Exp = () => {
   return (
     <div className="mt-10 mb-16">
       {/* Section Title */}
-      <h2 className="text-2xl heading-bold mb-6 ">
+      <h1 className="text-2xl heading-bold mb-6 ">
         Experience
-      </h2>
+      </h1>
 
       <div className="border-l-2 border-neutral-300 dark:border-neutral-700 pl-3 sm:pl-5 ml-1 sm:ml-2 space-y-6">
 
@@ -40,7 +40,7 @@ const Exp = () => {
                 <div className="flex gap-2">
                   <Tooltip>
                     <TooltipTrigger>
-                      <a href="#">
+                      <a href="#" title="Website">
                         <Globe className="w-4 h-4 text-neutral-600 dark:text-neutral-500" />
                         <TooltipContent>View Website</TooltipContent>
                       </a>
@@ -48,7 +48,11 @@ const Exp = () => {
                   </Tooltip>
                   <Tooltip>
                     <TooltipTrigger>
-                      <a href="https://www.facebook.com/ghardailodairy" target="_blank" rel="noopener">
+                      <a
+                        href="https://www.facebook.com/ghardailodairy" target="_blank"
+                        rel="noopener"
+                        title="Facebook"
+                      >
                         <Facebook className="w-4 h-4 text-neutral-600 dark:text-neutral-500" />
                         <TooltipContent>Facebook</TooltipContent>
                       </a>
@@ -67,25 +71,25 @@ const Exp = () => {
             </div>
 
             {/* Post / Position */}
-            <p className="mt-2 sm:mt-1 text-neutral-700 dark:text-neutral-500 text-lg font-medium">
+            <p className="mt-2 sm:mt-1 text-muted-foreground text-lg font-medium">
               Frontend Developer Intern
             </p>
 
             {/* Tech Icons */}
             <div className="flex flex-wrap items-center gap-3 mt-3 text-neutral-700 dark:text-neutral-300">
-              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all cursor-pointer hover:bg-primary/5">
+              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all select-none hover:bg-primary/5">
                 <FaHtml5 className="text-[#E34F26]" />
                 HTML5
               </span>
-              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all cursor-pointer hover:bg-primary/5">
+              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all select-none hover:bg-primary/5">
                 <FaCss3Alt className="text-[#1572B6]" />
                 CSS3
               </span>
-              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all cursor-pointer hover:bg-primary/5">
+              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all select-none hover:bg-primary/5">
                 <FaJs className="text-[#F7DF1E]" />
                 JavaScript
               </span>
-              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all cursor-pointer hover:bg-primary/5">
+              <span className="flex items-center gap-2 border-dashed border-2 px-3 py-1 text-sm rounded-xl hover:scale-105 transition-all select-none hover:bg-primary/5">
                 <FaReact className="text-[#61DAFB]" />
                 React
               </span>

@@ -33,7 +33,7 @@ const Hero = () => {
                 Frontend Developer
               </span>
             </Highlighter>{" "}
-            building digital experiences where design meets code, simply and effectively.
+            focused on clean interfaces, motion, and usability.
 
           </p>
           {/* Buttons */}
