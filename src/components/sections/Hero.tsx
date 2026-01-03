@@ -1,4 +1,4 @@
-import { FileDown } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Ripple } from "../ui/ripple"
 import { Button } from "../ui/button"
@@ -47,15 +47,16 @@ const Hero = () => {
               </Button>
             </Link>
             <a
-              href="/docs/Rakesh_patel_CV.pdf"
-              download="Rakesh-Patel_CV.pdf"
+              href="/docs/Rakesh Patel CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Button variant={"outline"} size={"lg"} className=" cursor-pointer">
-
-                <FileDown />
-                Download Resume
+              <Button variant="outline" size="lg" className="cursor-pointer">
+                View Resume
+                <ArrowUpRight />
               </Button>
             </a>
+
           </div>
         </div>
         <div

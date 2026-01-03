@@ -2,9 +2,9 @@ import type React from "react"
 
 import { useState } from "react"
 import { ArrowUpRight, Calendar, X } from "lucide-react"
-import { toast } from "react-toastify"
 // import CallbackForm from "../CallbackForm"
 import { MultiStepForm } from "./multistep-form"
+import { CopyCode } from "./copy-code-button"
 
 export function LetsWorkTogether() {
   const [isHovered, setIsHovered] = useState(false)
@@ -28,7 +28,7 @@ export function LetsWorkTogether() {
   }
 
   return (
-    <section className="flex py-15 items-center justify-center px-6">
+    <section className="flex mt-10 items-center justify-center px-6">
       <div className="relative flex flex-col items-center gap-12">
         <div
           className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-8 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -141,6 +141,7 @@ export function LetsWorkTogether() {
           >
             15 min intro call
           </span>
+          <CopyCode text="devrakesh.tech@gmail.com" />
         </div>
 
         <div
@@ -171,7 +172,7 @@ export function LetsWorkTogether() {
         >
           <div className="flex flex-col items-center gap-6">
             <h2
-              className="relative text-center text-5xl font-light tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              className="relative text-center text-5xl font-light tracking-tight text-foreground  sm:text-6xl md:text-7xl lg:text-8xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{
                 opacity: isClicked ? 0 : 1,
                 transform: isClicked ? "translateY(-40px) scale(0.95)" : "translateY(0) scale(1)",
@@ -189,7 +190,7 @@ export function LetsWorkTogether() {
               </span>
               <span className="block overflow-hidden">
                 <span
-                  className="block transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75"
+                  className="block mb-4 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75"
                   style={{
                     transform: isHovered && !isClicked ? "translateY(-8%)" : "translateY(0)",
                   }}
@@ -257,16 +258,7 @@ export function LetsWorkTogether() {
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
             Have a project in mind? I'd love to hear about it. Let's create something exceptional together.
           </p>
-          <span
-            onClick={() => {
-              navigator.clipboard.writeText("rk5080976@gmail.com");
-              toast.success("Email copied to clipboard!", {
-                theme: "dark",
-                position: "top-center"
-              })
-
-            }}
-            className="text-xs tracking-widest cursor-pointer hover:text-primary transition-all hover:scale-105 uppercase text-muted-foreground/60">rk5080976@gmail.com</span>
+          <CopyCode text="devrakesh.tech@gmail.com" />
         </div>
       </div>
       {showCallbackForm && (
