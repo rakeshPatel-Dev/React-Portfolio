@@ -38,6 +38,39 @@ export const caseStudies: CaseStudy[] = [
       "ESLint & Prettier for code quality",
     ],
   },
+  {
+  id: "essence",
+  problem:
+    "Users often save recipes across different platforms without a centralized place to manage them. Existing recipe apps focus on discovery but lack a personal ‘kitchen’ experience where users can track saved recipes, understand cooking habits, and quickly revisit favorites.",
+
+  solution:
+    "Built a modern recipe and kitchen management app that allows users to explore recipes, bookmark them with timestamps, and manage everything inside a personalized ‘My Kitchen’ dashboard. Implemented authentication, global state management, responsive layouts, and real-time UI updates to ensure a smooth, app-like experience.",
+
+  result:
+    "Users were able to organize their saved recipes efficiently and gain insights into their cooking behavior through stats like total cook time and average cooking duration. The app improved retention by encouraging repeat visits through bookmarking and personalized dashboards.",
+
+  features: [
+    "Recipe discovery with clean filtering and sorting",
+    "Bookmark recipes with created-at timestamps",
+    "My Kitchen dashboard with saved recipes",
+    "Cooking stats (total & average cook time)",
+    "Auth-based personalized experience",
+    "Loading states and empty states for better UX",
+    "Fully responsive mobile-first UI",
+    "Dark mode with theme persistence",
+  ],
+
+  techStack: [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "ShadCN UI",
+    "React Context API",
+    "Firebase Authentication",
+    "Vercel for deployment",
+  ],
+},
+
 
   {
     id: "imagetoolkit",

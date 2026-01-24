@@ -5,7 +5,7 @@ import {
 } from "react-icons/ri";
 
 import { FaYoutube, FaUnsplash, FaReact } from "react-icons/fa";
-import { SiExpress, SiFirebase, SiGithub, SiNextdotjs, SiNodedotjs, SiOpenai, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { SiExpress, SiFirebase, SiGithub, SiNextdotjs, SiNodedotjs, SiOpenai, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { IoImage, IoSearch } from "react-icons/io5";
 // import { TbBrandTypescript } from "react-icons/tb";
 
@@ -47,6 +47,26 @@ export const projectData: ProjectType[] = [
       { icon: SiOpenai, tooltip: "AI Analysis", color: "#10a37f" }
     ],
   },
+  {
+  id: "essence",
+  image: "/images/essence.webp",
+  title: "Essence – Smart Recipe & Kitchen App",
+  description:
+    "A modern recipe discovery and personal kitchen app where users can explore recipes, bookmark favorites, track cooking stats, and manage their own kitchen experience with authentication and real-time state management.",
+  type: "fullStack",
+  typeColor: "#800000", // Essence primary color (calm, food-tech vibe)
+  liveLink: "https://essence.vercel.app/", // update if different
+  sourceLink: "https://github.com/rakeshpatel-dev/essence", // update repo
+  status: "Completed",
+  icons: [
+    { icon: SiTypescript, tooltip: "TypeScript", color: "#007acc" },
+    { icon: FaReact, tooltip: "React", color: "#61dafb" },
+    { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
+    { icon: SiFirebase, tooltip: "Firebase Auth", color: "#ffca28" },
+    { icon: SiReactrouter, tooltip: "React Router", color: "#ca4245" },
+  ],
+},
+
   {
     id: "cinebook",
     image: "/images/cinebook.webp",
