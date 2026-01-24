@@ -55,7 +55,7 @@ export const projectData: ProjectType[] = [
     "A modern recipe discovery and personal kitchen app where users can explore recipes, bookmark favorites, track cooking stats, and manage their own kitchen experience with authentication and real-time state management.",
   type: "fullStack",
   typeColor: "#800000", // Essence primary color (calm, food-tech vibe)
-  liveLink: "https://essence.vercel.app/", // update if different
+  liveLink: "https://rakesh-essence.vercel.app/", // update if different
   sourceLink: "https://github.com/rakeshpatel-dev/essence", // update repo
   status: "Completed",
   icons: [
