@@ -7,6 +7,9 @@ import { LocationTag } from "../ui/location-tag"
 
 
 const Hero = () => {
+
+  const ResumeHref = "/docs/RAKESH PATEL CV.pdf";
+
   return (
     <div>
       <section
@@ -47,7 +50,7 @@ const Hero = () => {
               </Button>
             </Link>
             <a
-              href="/docs/Rakesh Patel CV.pdf"
+              href={ResumeHref}
               target="_blank"
               rel="noopener noreferrer"
             >
