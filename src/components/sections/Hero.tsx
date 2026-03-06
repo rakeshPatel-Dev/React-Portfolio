@@ -58,6 +58,11 @@ const Hero = () => {
               </Button>
             </a>
 
+            <Link to="/tools">
+              <Button size="lg">
+                Tools & Resources
+              </Button>
+            </Link>
           </div>
         </div>
         <div

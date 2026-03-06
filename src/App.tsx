@@ -17,6 +17,8 @@ import { AppDock } from "./components/GlobalDock";
 import useAnalytics from "./hooks/useAnalytics";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "./components/ScrollToTop";
+import AllTools from "./components/tools/AllTools";
+import PasswordGenerator from "./components/tools/PasswordGenerator";
 
 const App = () => {
   const location = useLocation();
@@ -36,7 +38,10 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetails />} />
           <Route path="/404" element={<Page404 />} />
+          <Route path="/tools" element={<AllTools />} />
+          <Route path="/tools/password-generator" element={<PasswordGenerator />} />
           <Route path="*" element={<Page404 />} />
+
         </Routes>
       </AnimatePresence>
 
