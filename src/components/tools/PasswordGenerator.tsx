@@ -5,9 +5,12 @@ import {
   Copy, RefreshCw, Info, Check, RotateCcw,
   History, Fingerprint,
   BarChart3, Trash2,
-  X, AlertCircle
+  X, AlertCircle,
+  ArrowLeft
 } from "lucide-react"
 import { Tooltip } from "../ui/tooltip-card"
+import { Button } from "../ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface PasswordHistory {
   password: string;
@@ -382,6 +385,8 @@ const PasswordGenerator = () => {
     generatePassword()
   }, [generatePassword])
 
+  const navigate = useNavigate()
+
   return (
     <div className="min-h-screen bg-background">
       {/* Toast Notification */}
@@ -402,14 +407,27 @@ const PasswordGenerator = () => {
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
         <div className="max-w-[720px] w-full space-y-12">
           {/* Header */}
-          <div className="space-y-3">
-            <h1 className="text-foreground text-3xl font-light tracking-tight flex items-center gap-3">
-              <Fingerprint className="w-8 h-8" />
-              Key Generation
-            </h1>
-            <p className="text-muted-foreground text-sm font-medium uppercase tracking-widest">
-              Industrial grade cryptographic utility
-            </p>
+          <div className="space-y-3 flex items-center justify-between">
+            <div>
+
+              <h1 className="text-foreground heading-bold text-3xl font-light tracking-tight flex items-center gap-3">
+                <Fingerprint className="w-8 h-8" />
+                Key Generation
+              </h1>
+              <p className="text-muted-foreground heading-medium text-sm font-medium uppercase tracking-widest">
+                Industrial grade cryptographic utility
+              </p>
+            </div>
+            <div>
+              <Button
+                variant="ghost"
+                size="lg"
+                onClick={() => navigate(-1)}
+              >
+                <ArrowLeft />
+                Go Back
+              </Button>
+            </div>
           </div>
 
           <div className="bg-card border border-border p-8 space-y-10">

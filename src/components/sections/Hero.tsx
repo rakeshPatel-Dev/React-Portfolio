@@ -48,7 +48,7 @@ const Hero = () => {
               </Button>
             </Link>
             <a
-              href="/docs/Rakesh_Patel_CV.pdf"
+              href="https://rakesh-patel-cv.tiiny.site/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -58,12 +58,14 @@ const Hero = () => {
               </Button>
             </a>
 
-            <Link to="/tools">
-              <Button size="lg">
-                Tools & Resources
-              </Button>
-            </Link>
           </div>
+          <Link to="/tools">
+            <Button variant="ghost" size="lg"
+              className=" transition-all"
+            >
+              Tools & Resources
+            </Button>
+          </Link>
         </div>
         <div
           id="toastContainer"
