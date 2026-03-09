@@ -422,7 +422,13 @@ const PasswordGenerator = () => {
               <Button
                 variant="ghost"
                 size="lg"
-                onClick={() => navigate(-1)}
+                onClick={() => {
+                  if (window.history.length > 1) {
+                    navigate(-1)
+                  } else {
+                    navigate('/') // or another sensible default route
+                  }
+                }}
               >
                 <ArrowLeft />
                 Go Back
