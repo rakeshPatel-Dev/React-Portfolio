@@ -35,6 +35,7 @@ export const FormatSelector: React.FC<FormatSelectorProps> = ({
 
             return (
               <button
+                type='button'
                 key={format.value}
                 onClick={() => !disabled && onFormatChange(format.value)}
                 disabled={disabled}

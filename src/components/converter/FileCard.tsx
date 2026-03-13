@@ -1,5 +1,5 @@
 import type { ImageFile, ConvertedImage } from '@/types/image-converter.types';
-import { X, Download, Check, Image as ImageIcon, FileText } from 'lucide-react';
+import { X, Download, Image as ImageIcon, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
@@ -32,6 +32,14 @@ export const FileCard: React.FC<FileCardProps> = ({
     e.stopPropagation();
     if (isConverted && file.convertedBlob) {
       // Download logic here
+      const url = URL.createObjectURL(file.convertedBlob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = file.convertedName ?? file.name;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
   };
 

@@ -43,9 +43,18 @@ export const UploadZone: React.FC<UploadZoneProps> = ({
     >
       <div
         onClick={() => !isProcessing && fileInputRef.current?.click()}
+        onKeyDown={(e) => {
+          if (!isProcessing && (e.key === 'Enter' || e.key === ' ')) {
+            e.preventDefault();
+            fileInputRef.current?.click();
+          }
+        }}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
+        role="button"
+        tabIndex={isProcessing ? -1 : 0}
+        aria-label="Upload images"
         className={`
           relative overflow-hidden rounded-2xl border-2 border-dashed 
           transition-all duration-300 cursor-pointer

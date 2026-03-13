@@ -1,6 +1,6 @@
+import React from 'react';
 import { HardDrive, Download, TrendingDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 interface ConversionStatsProps {
   stats: {
     totalOriginalSize: number;
@@ -12,9 +12,10 @@ interface ConversionStatsProps {
 export const ConversionStats: React.FC<ConversionStatsProps> = ({ stats }) => {
   const formatSize = (bytes: number) => {
     if (bytes === 0) return '0 B';
+    if (bytes < 0) return `-${formatSize(-bytes)}`;
     const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+    const i = Math.min(Math.floor(Math.log(bytes) / Math.log(k)), sizes.length - 1);
     return `${parseFloat((bytes / Math.pow(k, i)).toFixed(2))} ${sizes[i]}`;
   };
 

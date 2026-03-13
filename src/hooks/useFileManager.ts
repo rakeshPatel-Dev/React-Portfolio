@@ -33,10 +33,17 @@ export const useFileManager = ({
   }, []);
 
   const addFiles = useCallback(async (fileList: FileList) => {
-    if (files.length + fileList.length > maxFiles) {
-      toast.error(`Maximum ${maxFiles} files allowed`);
-      return;
-    }
+    const currentLength = await new Promise<number>(resolve => {
+    setFiles(prev => {
+      resolve(prev.length);
+      return prev;
+    });
+  });
+  
+  if (currentLength + fileList.length > maxFiles) {
+    toast.error(`Maximum ${maxFiles} files allowed`);
+    return;
+  }
 
     const newFiles: ImageFile[] = [];
     const errors: string[] = [];

@@ -60,9 +60,9 @@ export const FileList: React.FC<FileListProps> = ({
       <CardContent>
         <ScrollArea className="h-[400px] pr-4">
           <div className="space-y-3">
-            {files.map((file, index) => (
+            {files.map((file) => (
               <FileCard
-                key={index}
+                key={file.id}
                 file={file}
                 onRemove={onRemove}
                 onToggleSelect={onToggleSelect}

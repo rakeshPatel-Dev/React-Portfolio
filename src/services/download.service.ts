@@ -24,13 +24,19 @@ export class DownloadService {
 
     const zip = new JSZip();
     
-    images.forEach(image => {
+    const validImages = images.filter(image => image.convertedBlob);
+   
+   if (validImages.length === 0) {
+     throw new Error('No converted images available');
+   }
+   
+   validImages.forEach(image => {
       const fileName = ConversionService.getOutputFileName(
         image.name,
         image.convertedType
       );
       
-      zip.file(fileName, image.convertedBlob);
+      zip.file(fileName, image.convertedBlob!);
     });
 
     const content = await zip.generateAsync({ 

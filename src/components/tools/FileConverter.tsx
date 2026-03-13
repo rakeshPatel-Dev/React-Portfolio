@@ -1,4 +1,3 @@
-'use client';
 
 import { useState, useCallback, useEffect } from 'react';
 import { useFileManager } from '@/hooks/useFileManager';
@@ -164,7 +163,6 @@ export const ImageConverter: React.FC = () => {
         </div>
 
         {/* Stats Overview */}
-        {hasConvertedFiles && <ConversionStats stats={stats} />}
 
         {/* Upload Zone */}
         <UploadZone
@@ -173,6 +171,8 @@ export const ImageConverter: React.FC = () => {
           isProcessing={isProcessing}
           fileCount={files.length}
         />
+
+        {hasConvertedFiles && <ConversionStats stats={stats} />}
 
         {/* Controls Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">

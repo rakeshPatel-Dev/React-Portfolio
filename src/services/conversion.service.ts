@@ -16,9 +16,9 @@ export class ConversionService {
         const { blob, dimensions } = await ImageProcessor.convertImage(file.file, options);
         
         const newSize = blob.size;
-        const compressionRatio = file.size > 0 
-          ? Math.round((1 - newSize / file.size) * 100) 
-          : 0;
+        const compressionRatio = file.size > 0
+  ? Math.max(0, Math.round((1 - newSize / file.size) * 100))
+  : 0;
 
         converted.push({
           ...file,

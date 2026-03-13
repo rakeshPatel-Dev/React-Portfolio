@@ -20,15 +20,21 @@ export class ImageProcessor {
         URL.revokeObjectURL(img.src);
         resolve({ width: img.width, height: img.height });
       };
-      img.onerror = () => reject(new Error('Failed to load image'));
+      img.onerror = () => {
+        URL.revokeObjectURL(img.src);
+        reject(new Error('Failed to load image'));
+      };
     });
   }
-
   static calculateDimensions(
     originalWidth: number,
     originalHeight: number,
     maxDimension: number = this.MAX_DIMENSION
   ): ImageDimensions {
+    if (originalWidth <= 0 || originalHeight <= 0) {
+     throw new Error('Image dimensions must be positive');
+    }
+
     if (originalWidth <= maxDimension && originalHeight <= maxDimension) {
       return { width: originalWidth, height: originalHeight };
     }
@@ -90,10 +96,12 @@ export class ImageProcessor {
         URL.revokeObjectURL(img.src);
         resolve(img);
       };
-      img.onerror = () => reject(new Error('Failed to load image'));
+      img.onerror = () => {
+        URL.revokeObjectURL(img.src);
+        reject(new Error('Failed to load image'));
+      };
     });
   }
-
   private static getMimeType(format: ImageFormat): string {
     const mimeTypes: Record<ImageFormat, string> = {
       JPG: 'image/jpeg',
