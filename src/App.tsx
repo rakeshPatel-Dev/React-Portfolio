@@ -19,6 +19,7 @@ import { Toaster } from "react-hot-toast";
 import ScrollToTop from "./components/ScrollToTop";
 import AllTools from "./components/tools/AllTools";
 import PasswordGenerator from "./components/tools/PasswordGenerator";
+import ImageConverter from "./components/tools/FileConverter";
 
 const App = () => {
   const location = useLocation();
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/404" element={<Page404 />} />
           <Route path="/tools" element={<AllTools />} />
           <Route path="/tools/password-generator" element={<PasswordGenerator />} />
+          <Route path="/tools/image-converter" element={<ImageConverter />} />
           <Route path="*" element={<Page404 />} />
 
         </Routes>

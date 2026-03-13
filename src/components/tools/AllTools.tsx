@@ -22,7 +22,7 @@ const AllTools = () => {
       icon: Repeat,
       title: "File Converter",
       description: "Optimized conversion for SVG, WebP, and JSON assets.",
-      href: "/tools/file-converter"
+      href: "/tools/image-converter"
 
     },
     {
