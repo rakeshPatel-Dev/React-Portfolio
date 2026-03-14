@@ -11,33 +11,39 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "moodymusik",
-    problem:
-      "Users struggled to find personalized playlists that matched their mood throughout the day. Existing music apps had generic playlists and limited mood-based recommendations.",
-    solution:
-      "Developed a full-stack web app that dynamically generates mood-based playlists. Integrated sentiment analysis, user mood selection, real-time audio previews, and smooth UI transitions. Implemented Firebase for authentication and cloud storage.",
-    result:
-      "User engagement increased significantly. Average listening time per session rose by 35%, and users reported higher satisfaction due to personalized playlists. The app also improved discoverability of new music.",
-    features: [
-      "Mood-based playlist generator",
-      "Real-time search and filtering",
-      "Dedicated song player with audio previews",
-      "Real-time mood tagging",
-      "Save favorite playlists",
-      "Responsive design for mobile & desktop",
-      "Dark mode toggle",
-      "Smooth animations and transitions",
-    ],
-    techStack: [
-      "React",
-      "TypeScript",
-      "TailwindCSS",
-      "ShadCN UI",
-      "Firebase (Auth & Firestore)",
-      "Vercel for deployment",
-      "ESLint & Prettier for code quality",
-    ],
-  },
+  id: "academix",
+  problem:
+    "Many small academic institutions still manage students, teachers, and course assignments using spreadsheets or disconnected tools. This leads to poor visibility of academic data, manual errors, and inefficient administrative workflows.",
+
+  solution:
+    "Built a full-stack academic management platform that centralizes institutional operations. The system provides role-based dashboards for admins, teachers, and students, allowing administrators to manage courses, enroll students, assign teachers, and monitor academic data from a unified interface. The backend follows a modular architecture with controllers, services, middleware, and email services for system notifications.",
+
+  result:
+    "Delivered a scalable academic management system demonstrating production-style backend architecture, role-based access control, and full CRUD workflows for institutional data. The platform provides a clear foundation for expanding into a full learning management system (LMS).",
+
+  features: [
+    "Role-based authentication for Admin, Teacher, and Student",
+    "Student management with enrollment tracking",
+    "Teacher management and course assignments",
+    "Course creation and academic resource management",
+    "Analytics dashboard with Chart.js visualizations",
+    "Email notification service using Nodemailer",
+    "Protected routes with JWT authentication",
+    "Responsive interface with TailwindCSS",
+  ],
+
+  techStack: [
+    "React",
+    "Vite",
+    "TailwindCSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB (Mongoose)",
+    "JWT Authentication",
+    "Nodemailer",
+    "React Hook Form",
+  ],
+},
   {
   id: "essence",
   problem:

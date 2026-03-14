@@ -4,8 +4,8 @@ import {
   RiJavascriptFill,
 } from "react-icons/ri";
 
-import { FaYoutube, FaUnsplash, FaReact } from "react-icons/fa";
-import { SiExpress, SiFirebase, SiGithub, SiNextdotjs, SiNodedotjs, SiOpenai, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { FaYoutube, FaUnsplash, FaReact, FaEnvelope } from "react-icons/fa";
+import { SiExpress, SiFirebase, SiGithub, SiJsonwebtokens, SiMongodb, SiNextdotjs, SiNodedotjs, SiOpenai, SiReacthookform, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { IoImage, IoSearch } from "react-icons/io5";
 // import { TbBrandTypescript } from "react-icons/tb";
 
@@ -27,6 +27,30 @@ export interface ProjectType {
 }
 
 export const projectData: ProjectType[] = [
+  {
+  id: "academix",
+  image: "/images/academix.webp",
+  title: "Academix – Academic Management System",
+  description:
+    "A full-stack academic management platform to manage students, teachers, and courses through role-based dashboards which supports course assignments, student enrollments, analytics dashboards, and automated email notifications.",
+  type: "fullStack",
+  typeColor: "#800000",
+  liveLink: "https://academix-demo.com", // update when deployed
+  sourceLink: "https://github.com/rakeshpatel-dev/academix",
+  status: "Completed",
+  icons: [
+    { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
+    { icon: FaReact, tooltip: "React", color: "#61dafb" },
+    { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
+    { icon: SiReacthookform, tooltip: "React Hook Form", color: "#ec5990" },
+    { icon: SiNodedotjs, tooltip: "Node.js", color: "#339933" },
+    { icon: SiExpress, tooltip: "Express.js", color: "#000000" },
+    { icon: SiMongodb, tooltip: "MongoDB", color: "#47a248" },
+    { icon: SiJsonwebtokens, tooltip: "JWT", color: "#000000" },
+{ icon: FaEnvelope, tooltip: "Nodemailer", color: "#0ea5e9" },
+    
+  ],
+},
    {
     id: "ishirable",
     image: "/images/ishirable.webp",
