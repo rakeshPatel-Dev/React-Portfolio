@@ -93,7 +93,7 @@ const ProjectSec = () => {
               {/* Technologies */}
               <div className="flex flex-col gap-2 mb-4">
                 <h3>Technologies</h3>
-                <div className="flex items-center  gap-4">
+                <div className="flex items-center flex-wrap  gap-4">
                   {project.icons.map((iconData, idx) => {
                     const Icon = iconData.icon;
                     return (

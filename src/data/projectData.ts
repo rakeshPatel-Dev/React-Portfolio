@@ -59,11 +59,11 @@ export const projectData: ProjectType[] = [
       "An AI-powered platform that analyzes public GitHub activity and converts it into recruiter-focused hiring signals with clear improvement insights.",
     type: "fullStack",
     typeColor: "#800000", // blue = trust + tech
-    liveLink: "https://ishirable.com", // update if different
+    liveLink: "https://ishirable.vercel.app", 
     sourceLink: "https://github.com/rakeshpatel-dev/ishirable", // optional / private if needed
-    status: "Building",
+    status: "Completed",
     icons: [
-      { icon: RiJavascriptFill, tooltip: "JavaScript", color: "#f7df1e" },
+      { icon: SiTypescript, tooltip: "TypeScript", color: " #3178c6" },
       { icon: SiNextdotjs, tooltip: "React / Next.js", color: "#61dafb" },
       { icon: SiTailwindcss, tooltip: "Tailwind CSS", color: "#38bdf8" },
       { icon: SiNodedotjs, tooltip: "Node.js", color: "#339933" },
